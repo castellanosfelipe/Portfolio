@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe Peña — Marca Personal</title>
+<style>
+  :root{
+    --bg:#f6f5f3;
+    --dark:#17141c;
+    --accent:#5b4bd6;
+    --card:#fdfdfc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--dark);
+    font-family:'Hanken Grotesk',-apple-system,sans-serif;
+    padding:0 24px 80px;
+  }
+  header{
+    max-width:840px;
+    margin:0 auto;
+    padding:72px 0 32px;
+  }
+  header .avatar{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:24px;
+  }
+  h1{
+    font-family:'Newsreader',Georgia,serif;
+    font-weight:500;
+    font-size:2.4rem;
+    margin:0 0 12px;
+  }
+  header p{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.9rem;
+    color:#5b5763;
+    margin:0;
+  }
+  main{
+    max-width:840px;
+    margin:0 auto;
+  }
+  section{
+    margin-bottom:40px;
+  }
+  section h2{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--accent);
+    margin:0 0 16px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:16px;
+  }
+  a.card{
+    display:block;
+    background:var(--card);
+    border:1px solid #e4e2dd;
+    border-radius:12px;
+    padding:20px;
+    text-decoration:none;
+    color:var(--dark);
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  a.card:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+  }
+  a.card .title{
+    font-family:'Newsreader',Georgia,serif;
+    font-size:1.15rem;
+    margin-bottom:6px;
+  }
+  a.card .meta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    color:#8a8790;
+  }
+  .variants{
+    margin-top:10px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .variants a{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px dotted var(--accent);
+  }
+  footer{
+    max-width:840px;
+    margin:64px auto 0;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    color:#8a8790;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img class="avatar" src="avatar-felipe-memoji.png" alt="Felipe Peña">
+  <h1>Felipe Peña</h1>
+  <p>Marca personal — índice de documentos</p>
+</header>
+<main>
+  <section>
+    <h2>Sitio y marca</h2>
+    <div class="grid">
+      <a class="card" href="Sitio Web - Felipe Peña.dc.html">
+        <div class="title">Sitio Web</div>
+        <div class="meta">Sitio Web - Felipe Peña.dc.html</div>
+      </a>
+      <a class="card" href="Marca Personal Felipe Peña.html">
+        <div class="title">Marca Personal</div>
+        <div class="meta">Marca Personal Felipe Peña.html</div>
+      </a>
+      <a class="card" href="Marca Felipe Peña - Marca Personal.html">
+        <div class="title">Marca Personal (alterna)</div>
+        <div class="meta">Marca Felipe Peña - Marca Personal.html</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sistema de marca</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="title"><a href="Marca Felipe Peña - Sistema Final.dc.html" style="color:inherit;text-decoration:none;">Sistema Final</a></div>
+        <div class="meta">Marca Felipe Peña - Sistema Final.dc.html</div>
+        <div class="variants">
+          <a href="Marca Felipe Peña - Sistema Final-print.dc.html">versión impresión</a>
+          <a href="Marca Felipe Peña - Sistema Final-print-150f2ew.dc.html">versión impresión (alt)</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="title"><a href="Marca Personal - Exploración.dc.html" style="color:inherit;text-decoration:none;">Exploración</a></div>
+        <div class="meta">Marca Personal - Exploración.dc.html</div>
+        <div class="variants">
+          <a href="Marca Personal - Exploración-print.dc.html">versión impresión</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Portafolio</h2>
+    <div class="grid">
+      <a class="card" href="Portafolio AI - Felipe Peña.dc.html">
+        <div class="title">Portafolio AI</div>
+        <div class="meta">Portafolio AI - Felipe Peña.dc.html</div>
+      </a>
+      <a class="card" href="Portafolio Consultoría - Felipe Peña.dc.html">
+        <div class="title">Portafolio Consultoría</div>
+        <div class="meta">Portafolio Consultoría - Felipe Peña.dc.html</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ensayos</h2>
+    <div class="grid">
+      <a class="card" href="ensayos/Agencia sobre agentes.dc.html">
+        <div class="title">Agencia sobre agentes</div>
+      </a>
+      <a class="card" href="ensayos/Como elegir el experimento correcto.dc.html">
+        <div class="title">Cómo elegir el experimento correcto</div>
+      </a>
+      <a class="card" href="ensayos/Experimentacion en la era de la IA.dc.html">
+        <div class="title">Experimentación en la era de la IA</div>
+      </a>
+      <a class="card" href="ensayos/PMF sostener y expandir.dc.html">
+        <div class="title">PMF: sostener y expandir</div>
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  Publicado con GitHub Pages
+</footer>
+</body>
+</html>
