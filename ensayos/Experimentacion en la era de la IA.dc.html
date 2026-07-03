@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    html,body{margin:0;padding:0;background:#f6f5f3;}
+    ::selection{background:#5b4bd6;color:#fff;}
+  </style>
+</helmet>
+<div data-screen-label="Ensayo · Experimentación en la era de la IA" style="min-height:100vh;background:#f6f5f3;font-family:'Newsreader',Georgia,serif;color:#17141c;">
+
+  <nav style="position:sticky;top:0;z-index:50;background:rgba(246,245,243,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #e5e2dc;">
+    <div style="max-width:760px;margin:0 auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;font-family:'Hanken Grotesk',sans-serif;">
+      <a href="../Portafolio Consultoría - Felipe Peña.dc.html#ensayos" style="display:flex;align-items:center;gap:8px;color:#4a4654;text-decoration:none;font-size:14px;font-weight:500;" style-hover="color:#5b4bd6;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+        Felipe Peña
+      </a>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#9b95a6;">ENSAYO 4 DE 4</span>
+    </div>
+    <div ref="{{ progressRef }}" style="position:absolute;bottom:-1px;left:0;height:2px;background:#5b4bd6;width:0%;"></div>
+  </nav>
+
+  <article style="max-width:700px;margin:0 auto;padding:60px 28px 0;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#5b4bd6;display:flex;align-items:center;gap:10px;margin-bottom:22px;">
+      <span>EXPERIMENTACIÓN & IA</span><span style="color:#c9c4d8;">·</span><span style="color:#9b95a6;">10 min de lectura</span>
+    </div>
+    <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(34px,5vw,50px);line-height:1.15;letter-spacing:-0.01em;margin:0;">La era de la IA exige otra forma de experimentar</h1>
+    <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:20px;line-height:1.5;color:#4a4654;margin:22px 0 0;max-width:580px;">Menos micro-optimizaciones, apuestas más grandes en monetización y tests más largos.</p>
+
+    <div style="height:1px;background:#e5e2dc;margin:40px 0;"></div>
+
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">La experimentación es de mis partes favoritas del trabajo en producto. Pero apostaría a que el playbook de experimentación que la mayoría de los equipos sigue usando quedó obsoleto. Y quizás no sea tan malo, porque la forma vieja de experimentar tenía límites que todos conocíamos y pocos admitían:</p>
+    <ul style="margin:0 0 22px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px;">
+      <li style="font-size:18.5px;line-height:1.6;color:#2b2733;display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">–</span>Ajustes menores en vez de apuestas grandes.</li>
+      <li style="font-size:18.5px;line-height:1.6;color:#2b2733;display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">–</span>Optimizar superficies visibles en vez de la complejidad de fondo.</li>
+      <li style="font-size:18.5px;line-height:1.6;color:#2b2733;display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">–</span>Ni tocar la monetización ("son seis meses de aprobaciones y desarrollo, con suerte").</li>
+      <li style="font-size:18.5px;line-height:1.6;color:#2b2733;display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">–</span>Medir con antes/después en vez de A/B tests reales o feature flags.</li>
+      <li style="font-size:18.5px;line-height:1.6;color:#2b2733;display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">–</span>Perseguir victorias rápidas, todo medido a dos semanas.</li>
+    </ul>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Algo de eso tenía sentido cuando el desarrollo era lento y había tanta superficie que dar a conocer una feature ya era una victoria. Pero incluso entonces, muchos de esos experimentos apenas adelantaban ingresos que iban a llegar igual. Mejorabas un poco la experiencia, creabas algo de urgencia, y algo que habría pasado de todos modos pasaba antes. Por eso tantos experimentos suman al bottom line sin producir jamás un salto real.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Había margen de mejora hace rato. Ahora el terreno cambió por completo. Estos son los cuatro cambios de fondo y las tres cosas que haría distinto.</p>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">Los 4 cambios que rompieron el playbook</h2>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">1 · Las superficies se están colapsando</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Los flujos nuevos, sobre todo en productos de IA, son conversacionales y van por prompt. Hay menos superficies que necesiten "awareness". La UI dejó de ser la forma principal de interactuar con muchas features, así que optimizarla hasta el infinito ya no paga.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Piensa en una herramienta de transcripción de reuniones que usas a diario sin abrir casi nunca su interfaz. Se mete a tu reunión, genera la transcripción, y tú conversas con ese contenido por prompts desde otro producto. ¿Qué UI le vas a hacer A/B test ahí?</p>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">2 · El desarrollo se aceleró</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">El impacto de un experimento exitoso dura menos, porque la superficie donde lo corriste cambia rapidísimo. Mejorar un embudo 1% suena absurdo cuando ese embudo se rediseña en dos meses. Peor si medir el cambio te toma dos o tres semanas. La mayoría de los equipos no tiene ni el tiempo ni el tráfico para sacar conclusiones a tiempo. Normalmente le faltan los dos.</p>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">3 · La personalización dejó de ser necesaria</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Buena parte de los micro-ajustes existía por la personalización: dar más contexto, usar lenguaje más relevante para cada segmento. Siempre fue doloroso. Limitabas la audiencia por defecto, lo que servía para un segmento no escalaba a otro, y todo había que hardcodearlo. Pura deuda de vida útil incierta.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">La IA volvió casi todo eso irrelevante. Una conversación es personalizada por naturaleza. La necesidad de testear esos ajustes chicos simplemente desapareció.</p>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">4 · Usar el producto ahora cuesta plata</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Muchos productos consumen tokens de LLM para funcionar, así que el uso dejó de ser gratis. La monetización golpea antes en el embudo y cada acción del usuario cuesta más.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Por eso, no tocar la monetización en tus experimentos pasó de ser prudencia a ser el peor error disponible. Nadie tiene la monetización de IA resuelta. Hasta los laboratorios más grandes siguen cambiando sus modelos de precios cada rato. Tratar esa área como algo estático es regalar la palanca de crecimiento más potente que tienes.</p>
+
+    <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:30px 32px;margin:8px 0 40px;box-shadow:0 1px 2px rgba(20,16,30,0.04);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9b95a6;margin-bottom:8px;">Figura · Playbook viejo vs. playbook nuevo</div>
+      <div style="display:flex;gap:16px;margin:20px 0 6px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;">
+        <span style="display:flex;align-items:center;gap:6px;color:#9b95a6;"><span style="width:9px;height:9px;border-radius:2px;background:#c9c4d8;display:inline-block;"></span>VIEJO</span>
+        <span style="display:flex;align-items:center;gap:6px;color:#5b4bd6;"><span style="width:9px;height:9px;border-radius:2px;background:#5b4bd6;display:inline-block;"></span>NUEVO</span>
+      </div>
+
+      <div style="margin-top:18px;">
+        <div style="font-family:'Hanken Grotesk',sans-serif;font-size:13.5px;font-weight:600;color:#17141c;margin-bottom:8px;">Tamaño de la apuesta</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:25%;height:100%;background:#c9c4d8;"></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:85%;height:100%;background:#5b4bd6;"></div></div></div>
+      </div>
+
+      <div style="margin-top:22px;">
+        <div style="font-family:'Hanken Grotesk',sans-serif;font-size:13.5px;font-weight:600;color:#17141c;margin-bottom:8px;">Duración del test</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:20%;height:100%;background:#c9c4d8;"></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:80%;height:100%;background:#5b4bd6;"></div></div></div>
+      </div>
+
+      <div style="margin-top:22px;">
+        <div style="font-family:'Hanken Grotesk',sans-serif;font-size:13.5px;font-weight:600;color:#17141c;margin-bottom:8px;">Foco en monetización</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:15%;height:100%;background:#c9c4d8;"></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:80%;height:100%;background:#5b4bd6;"></div></div></div>
+      </div>
+
+      <div style="margin-top:22px;">
+        <div style="font-family:'Hanken Grotesk',sans-serif;font-size:13.5px;font-weight:600;color:#17141c;margin-bottom:8px;">Optimización de superficie UI</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:85%;height:100%;background:#c9c4d8;"></div></div></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="width:52px;flex:none;"></span><div style="flex:1;height:9px;background:#ece9f2;border-radius:999px;overflow:hidden;"><div style="width:25%;height:100%;background:#5b4bd6;"></div></div></div>
+      </div>
+      <p style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;line-height:1.5;color:#6c6776;margin:20px 0 0;">Menos foco en pulir interfaz, más en apuestas grandes de monetización sostenidas en el tiempo.</p>
+    </div>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">Las 3 cosas que haría distinto</h2>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">1 · Dejar de gastar ingeniería en micro-optimizaciones</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Antes cada optimización pasaba por horas de ingeniería. Hoy un PM puede resolver tareas cada vez más complejas de punta a punta por su cuenta. Algunas las corres como A/B test de verdad. Otras honestamente no valen la pena. Pero hay algo que no haría jamás: quemar al equipo de ingeniería en retoques de interfaz. Ese recurso es demasiado escaso para gastarlo ahí.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Además estos ajustes pueden ser hasta entretenidos para un PM o un marketer, y son miserables para la mayoría de los ingenieros. Si los absorbes tú, liberas a ingeniería para los problemas difíciles. Todos crean más valor.</p>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">2 · Apostar más grande, sobre todo en monetización</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">En algún momento estas transformaciones se van a asentar y volveremos a afinar plataformas estables. Hoy no. Hoy lo grande se mueve rápido y hay que jugar a ese nivel. Y sí, hablo de monetización: es la palanca más grande disponible para desbloquear engagement, cuidar margen y empujar expansión y retención.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Un principio contraintuitivo que vale oro: los mejores experimentos de monetización no buscan subir ingresos. Los experimentos neutrales en ingresos suelen ser los grandes ganadores, porque levantan engagement, y ese engagement se convierte en ingresos uno, dos o tres meses después. Mientras no empujen el negocio a territorio insostenible y suban el engagement, son victoria.</p>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">3 · Apuestas más grandes, tests más largos</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Si tus cambios impactan al sistema completo, tienes que dejarlos correr mucho más tiempo. Esos resultados a dos semanas que tanto gustan en los comités son justo lo peor que puedes hacer ahora.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Un ejemplo de cómo se ve esto en la práctica: pruebas dar 5 contra 10 créditos el primer día del plan gratis. De inmediato se ve horrible. ¿Por qué regalar más? Pero dos meses después, el efecto en engagement y retención alcanza al costo inicial y lo supera. Primeros 30 días, pésimo. Largo plazo, netamente positivo.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Enciende el experimento y dale tiempo. Corre el split una o dos semanas, pero monitorea las cohortes uno o dos meses. No decidas apenas termina la primera fase.</p>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">Quizás ni deberías testear eso</h2>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Mi opinión más polémica: no tienes que testear todo. En este mundo nuevo hay áreas donde puedes saltarte ese paso.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Ojo, todo debe medirse. Cada cambio anotado, cada clic e interacción trackeados. Eso no se negocia. Pero con inteligencia promedio disponible a un prompt de distancia, partir de cero es absurdo. Pregúntale a la IA, implementa eso como baseline y listo.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Un ejemplo: las features de los planes superiores deberían verse desde el plan inferior, con paywalls a nivel de feature que se expliquen solos. Si tu plan gratis esconde diez features de pago que ni se muestran, eso no es un experimento pendiente. Es prácticamente un bug.</p>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">La experimentación no murió, cambió de forma</h2>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">La UI que retocábamos está desapareciendo. Los cambios corren demasiado rápido para testearlos todos. La personalización es automática. Y el costo de usar el producto se disparó. La forma vieja de experimentar dejó de ser inteligente.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Pero si sueltas las micro-optimizaciones, apuestas más grande y dejas correr los tests más tiempo, tu sistema de experimentación va a importar más que nunca. Y si te llevas una sola cosa de todo esto, que sea esta: ve y experimenta con tu sistema de monetización. Ahí hay espacio para crecer, te lo aseguro.</p>
+
+    <div style="background:#f1eff5;border-left:3px solid #5b4bd6;border-radius:4px;padding:18px 22px;margin:28px 0;">
+      <p style="font-family:'Newsreader',serif;font-style:italic;font-size:16.5px;line-height:1.6;color:#3a3644;margin:0;">Nota: este ensayo trata sobre experimentación y monetización de producto en términos generales. No es asesoría financiera.</p>
+    </div>
+
+    <div style="margin-top:64px;border-top:1px solid #e5e2dc;padding-top:36px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#9b95a6;margin-bottom:24px;">Preguntas frecuentes</div>
+      <div style="margin-bottom:26px;"><div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:#17141c;margin-bottom:8px;">¿Sigue teniendo sentido hacer A/B tests?</div><p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.6;color:#4a4654;margin:0;">Sí, pero para apuestas grandes con impacto de sistema: monetización, límites de freemium, sistemas de créditos. Los micro-retoques de interfaz conviene automatizarlos o saltarlos.</p></div>
+      <div style="margin-bottom:26px;"><div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:#17141c;margin-bottom:8px;">¿Por qué experimentar con monetización si nadie la tiene resuelta?</div><p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.6;color:#4a4654;margin:0;">Justamente por eso. En pleno ciclo de adopción de la IA, la monetización es de las palancas más grandes y menos exploradas. Ignorarla es dejar valor sobre la mesa.</p></div>
+      <div style="margin-bottom:26px;"><div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:#17141c;margin-bottom:8px;">¿Cuánto debe durar un experimento hoy?</div><p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.6;color:#4a4654;margin:0;">Corre el split una o dos semanas, pero monitorea las cohortes uno o dos meses. Muchos efectos positivos solo aparecen cuando las cohortes maduran, a veces pasados los 45 días.</p></div>
+      <div><div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:#17141c;margin-bottom:8px;">¿Hay cosas que no debería testear?</div><p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.6;color:#4a4654;margin:0;">Sí. Cuando algo es un estándar validado por miles de empresas, o directamente un bug, no lo testees desde cero. Adopta la mejor práctica como baseline y reserva los experimentos para lo incierto y de alto impacto.</p></div>
+    </div>
+  </article>
+
+  <footer style="background:#17141c;margin-top:80px;">
+    <div style="max-width:700px;margin:0 auto;padding:64px 28px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div style="font-family:'Newsreader',serif;font-weight:300;font-style:italic;font-size:20px;color:#b9b1e4;">¿Trabajas en producto? Hablemos.</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="mailto:hola@felipepena.co" style="background:#5b4bd6;color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;padding:12px 22px;border-radius:999px;text-decoration:none;" style-hover="background:#8b7cf6;">Escríbeme →</a>
+        <a href="../Portafolio Consultoría - Felipe Peña.dc.html#ensayos" style="border:1px solid rgba(255,255,255,0.2);color:#b9b1e4;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:14px;padding:12px 22px;border-radius:999px;text-decoration:none;" style-hover="border-color:#8b7cf6;color:#fff;">Más ensayos</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  onProgressRef = (el) => {
+    if (!el || this._wired) return;
+    this._wired = true;
+    const update = () => {
+      const h = document.documentElement;
+      const scrollTop = h.scrollTop || document.body.scrollTop;
+      const height = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+      const pct = height > 0 ? Math.min(100, (scrollTop / height) * 100) : 0;
+      el.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  };
+
+  renderVals() {
+    return { progressRef: this.onProgressRef };
+  }
+}
+</script>
+</body>
+</html>

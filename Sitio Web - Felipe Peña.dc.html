@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    html,body{margin:0;padding:0;background:#f6f5f3;}
+    ::selection{background:#5b4bd6;color:#fff;}
+    image-slot{display:block;width:100%;height:100%;}
+  </style>
+</helmet>
+<div style="min-height:100vh;background:#f6f5f3;font-family:'Hanken Grotesk',-apple-system,sans-serif;color:#17141c;">
+
+  <!-- NAV -->
+  <nav data-screen-label="Nav" style="position:sticky;top:0;z-index:50;background:rgba(246,245,243,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #e5e2dc;">
+    <div style="max-width:1140px;margin:0 auto;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px;">
+      <a href="#inicio" style="font-family:'Newsreader',Georgia,serif;font-size:22px;color:#17141c;text-decoration:none;">{{ name }}</a>
+      <div style="display:flex;gap:28px;align-items:center;font-size:14px;font-weight:500;">
+        <a href="#ensayos" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Ensayos</a>
+        <a href="#metodo" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Método</a>
+        <a href="#proyectos" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Proyectos</a>
+        <a href="#trayectoria" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Trayectoria</a>
+        <a href="mailto:{{ email }}" style="color:#fff;background:#17141c;border-radius:999px;padding:9px 18px;text-decoration:none;" style-hover="background:#5b4bd6;">Hablemos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" data-screen-label="Hero" style="max-width:1140px;margin:0 auto;padding:92px 32px 84px;display:flex;gap:72px;align-items:center;justify-content:space-between;">
+    <div style="max-width:620px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b4bd6;margin-bottom:26px;">Growth · Producto · Datos</div>
+      <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:68px;line-height:1.04;letter-spacing:-0.02em;margin:0;">El crecimiento no se hackea. <span style="font-style:italic;color:#5b4bd6;">Se compone.</span></h1>
+      <p style="font-size:17.5px;line-height:1.62;color:#4a4654;margin:26px 0 0;max-width:520px;">Soy <strong style="font-weight:600;color:#17141c;">{{ name }}</strong>, Growth Product Manager. Escribo sobre usuarios, fricción y los experimentos que se acumulan hasta mover la curva — y construyo productos para probarlo de punta a punta.</p>
+      <div style="display:flex;gap:18px;margin-top:38px;align-items:center;">
+        <a href="#proyectos" style="background:#5b4bd6;color:#fff;font-weight:600;font-size:15px;padding:14px 26px;border-radius:2px;text-decoration:none;" style-hover="background:#17141c;">Ver los proyectos →</a>
+        <a href="#ensayos" style="font-weight:600;font-size:15px;color:#17141c;border-bottom:2px solid #b9b1e4;padding-bottom:4px;text-decoration:none;" style-hover="border-color:#5b4bd6;color:#5b4bd6;">Leer los ensayos</a>
+      </div>
+    </div>
+    <div style="flex:none;position:relative;">
+      <div style="position:absolute;left:-14px;top:-14px;right:14px;bottom:14px;border:1px solid #d8d3e6;border-radius:10px;"></div>
+      <div style="width:290px;height:344px;position:relative;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="retrato-web" shape="rounded" radius="8" placeholder="Tu retrato" hint-size="290px,344px" style="width:290px;height:344px;display:block;position:relative;"></x-import>
+      </div>
+    </div>
+  </header>
+
+  <!-- MÉTODO -->
+  <section id="metodo" data-screen-label="Método" style="background:#fdfdfc;border-top:1px solid #eceae5;border-bottom:1px solid #eceae5;">
+    <div style="max-width:1140px;margin:0 auto;padding:76px 32px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:34px;">El método</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:36px;">
+        <div style="border-top:2px solid #5b4bd6;padding-top:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:10px;">01</div>
+          <div style="font-family:'Newsreader',serif;font-size:24px;">Escuchar</div>
+          <p style="font-size:14px;line-height:1.6;color:#6c6776;margin:10px 0 0;">Usuarios, soporte y pre-venta: ahí vive la fricción.</p>
+        </div>
+        <div style="border-top:2px solid #5b4bd6;padding-top:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:10px;">02</div>
+          <div style="font-family:'Newsreader',serif;font-size:24px;">Medir</div>
+          <p style="font-size:14px;line-height:1.6;color:#6c6776;margin:10px 0 0;">Embudo y cohortes: el dato señala el cuello de botella.</p>
+        </div>
+        <div style="border-top:2px solid #5b4bd6;padding-top:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:10px;">03</div>
+          <div style="font-family:'Newsreader',serif;font-size:24px;">Aprender</div>
+          <p style="font-size:14px;line-height:1.6;color:#6c6776;margin:10px 0 0;">Experimentos con hipótesis clara y criterio de éxito.</p>
+        </div>
+        <div style="border-top:2px solid #5b4bd6;padding-top:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:10px;">04 ↻</div>
+          <div style="font-family:'Newsreader',serif;font-size:24px;">Repetir</div>
+          <p style="font-size:14px;line-height:1.6;color:#6c6776;margin:10px 0 0;">Lo que funciona se queda — y se compone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENSAYOS -->
+  <section id="ensayos" data-screen-label="Ensayos" style="max-width:1140px;margin:0 auto;padding:88px 32px;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;">Ensayos</div>
+      <span style="font-size:13.5px;font-weight:600;color:#5b4bd6;">Próximamente en LinkedIn ↗</span>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:26px;padding:28px 0;border-top:1px solid #e5e2dc;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9b95a6;flex:none;">001</span>
+      <div style="flex:1;">
+        <div style="font-family:'Newsreader',serif;font-size:27px;line-height:1.2;">El onboarding que nadie terminaba (y el dato que lo delató)</div>
+        <div style="font-size:13.5px;color:#6c6776;margin-top:6px;">Fricción → Retención · 7 min</div>
+      </div>
+      <span style="color:#5b4bd6;font-size:18px;flex:none;">→</span>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:26px;padding:28px 0;border-top:1px solid #e5e2dc;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9b95a6;flex:none;">002</span>
+      <div style="flex:1;">
+        <div style="font-family:'Newsreader',serif;font-size:27px;line-height:1.2;">Dónde se muere tu activación: cuatro cuellos de botella típicos</div>
+        <div style="font-size:13.5px;color:#6c6776;margin-top:6px;">Anatomía del embudo · 9 min</div>
+      </div>
+      <span style="color:#5b4bd6;font-size:18px;flex:none;">→</span>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:26px;padding:28px 0;border-top:1px solid #e5e2dc;border-bottom:1px solid #e5e2dc;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9b95a6;flex:none;">003</span>
+      <div style="flex:1;">
+        <div style="font-family:'Newsreader',serif;font-size:27px;line-height:1.2;">Doce experimentos, una curva: lo que queda tras un trimestre</div>
+        <div style="font-size:13.5px;color:#6c6776;margin-top:6px;">Experimentos que componen · 6 min</div>
+      </div>
+      <span style="color:#5b4bd6;font-size:18px;flex:none;">→</span>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" data-screen-label="Proyectos" style="background:#17141c;">
+    <div style="max-width:1140px;margin:0 auto;padding:88px 32px 92px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#8079a0;margin-bottom:22px;">Proyectos personales</div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:42px;line-height:1.15;letter-spacing:-0.01em;color:#fff;margin:0;max-width:720px;">Donde pruebo ideas <span style="font-style:italic;color:#b9b1e4;">de punta a punta</span> — del problema al deploy.</h2>
+      <p style="font-size:15.5px;line-height:1.6;color:#9a93b0;margin:20px 0 0;max-width:560px;">Varios nacen de fricciones reales de mi trabajo gestionando productos. Todo el código está en <a href="https://github.com/castellanosfelipe" target="_blank" rel="noopener" style="color:#b9b1e4;text-decoration:underline;text-underline-offset:3px;" style-hover="color:#fff;">GitHub ↗</a>.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px;">
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:30px 32px;display:flex;flex-direction:column;gap:14px;" style-hover="border-color:rgba(139,124,246,0.5);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;">P·01</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.06em;color:#8079a0;border:1px solid rgba(255,255,255,0.14);border-radius:999px;padding:4px 10px;">TypeScript · Full-stack</span>
+          </div>
+          <div style="font-family:'Newsreader',serif;font-size:27px;color:#fff;">AgileFlow</div>
+          <p style="font-size:14px;line-height:1.62;color:#cfcbe0;margin:0;flex:1;">Gestión ágil completa: tareas, subtareas, sprints, backlog, Kanban, Gantt, PERT y tablero ejecutivo — con migración desde Jira y backups desde la interfaz.</p>
+          <div style="display:flex;gap:16px;align-items:center;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+            <a href="https://agileflow-indol.vercel.app" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;background:#5b4bd6;border-radius:999px;padding:7px 15px;text-decoration:none;" style-hover="background:#8b7cf6;">Demo en vivo ↗</a>
+            <a href="https://github.com/castellanosfelipe/AgileFlow" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">Código ↗</a>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:30px 32px;display:flex;flex-direction:column;gap:14px;" style-hover="border-color:rgba(139,124,246,0.5);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;">P·02</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.06em;color:#8079a0;border:1px solid rgba(255,255,255,0.14);border-radius:999px;padding:4px 10px;">JavaScript · Web</span>
+          </div>
+          <div style="font-family:'Newsreader',serif;font-size:27px;color:#fff;">FlowBoard — Jira Analytics</div>
+          <p style="font-size:14px;line-height:1.62;color:#cfcbe0;margin:0;flex:1;">Convierte datos de Jira en vistas visuales —Gantt, PERT, seguimiento diario y tablero ejecutivo— para leer avances y desviaciones de un vistazo.</p>
+          <div style="display:flex;gap:16px;align-items:center;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+            <a href="https://castellanosfelipe.github.io/flowboard-jira-analytics/" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;background:#5b4bd6;border-radius:999px;padding:7px 15px;text-decoration:none;" style-hover="background:#8b7cf6;">Demo en vivo ↗</a>
+            <a href="https://github.com/castellanosfelipe/flowboard-jira-analytics" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">Código ↗</a>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:30px 32px;display:flex;flex-direction:column;gap:14px;" style-hover="border-color:rgba(139,124,246,0.5);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;">P·03</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.06em;color:#8079a0;border:1px solid rgba(255,255,255,0.14);border-radius:999px;padding:4px 10px;">Vue · TypeScript</span>
+          </div>
+          <div style="font-family:'Newsreader',serif;font-size:27px;color:#fff;">BodyCalc</div>
+          <p style="font-size:14px;line-height:1.62;color:#cfcbe0;margin:0;flex:1;">Calculadoras científicas de composición corporal en cadena: ingresas tus datos una vez y fluyen a IMC, grasa corporal, calorías y macros. Gratis, sin registro y con fuentes citadas.</p>
+          <div style="display:flex;gap:16px;align-items:center;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+            <a href="https://castellanosfelipe.github.io/Body_Calc/" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;background:#5b4bd6;border-radius:999px;padding:7px 15px;text-decoration:none;" style-hover="background:#8b7cf6;">Demo en vivo ↗</a>
+            <a href="https://github.com/castellanosfelipe/Body_Calc" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">Código ↗</a>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:30px 32px;display:flex;flex-direction:column;gap:14px;" style-hover="border-color:rgba(139,124,246,0.5);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;">P·04</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.06em;color:#8079a0;border:1px solid rgba(255,255,255,0.14);border-radius:999px;padding:4px 10px;">TypeScript · Escritorio</span>
+          </div>
+          <div style="font-family:'Newsreader',serif;font-size:27px;color:#fff;">Pomodoro Llanero</div>
+          <p style="font-size:14px;line-height:1.62;color:#cfcbe0;margin:0;flex:1;">Temporizador Pomodoro de escritorio, local-first y sin telemetría, que premia cada descanso con la fauna del Llano colombiano.</p>
+          <div style="display:flex;gap:12px;row-gap:10px;align-items:center;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+            <a href="https://github.com/castellanosfelipe/Pomodoro_llanero/releases/download/v0.3.0/Pomodoro.Llanero_0.3.0_aarch64.dmg" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;background:#5b4bd6;border-radius:999px;padding:7px 15px;text-decoration:none;" style-hover="background:#8b7cf6;">macOS ↓</a>
+            <a href="https://github.com/castellanosfelipe/Pomodoro_llanero/releases/download/v0.3.0/Pomodoro.Llanero_0.3.0_x64-setup.exe" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;background:#5b4bd6;border-radius:999px;padding:7px 15px;text-decoration:none;" style-hover="background:#8b7cf6;">Windows ↓</a>
+            <a href="https://castellanosfelipe.github.io/Pomodoro_llanero/" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">Demo web ↗</a>
+            <a href="https://github.com/castellanosfelipe/Pomodoro_llanero" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">Código ↗</a>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:30px 32px;display:flex;flex-direction:column;gap:14px;" style-hover="border-color:rgba(139,124,246,0.5);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;">P·05</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.06em;color:#8079a0;border:1px solid rgba(255,255,255,0.14);border-radius:999px;padding:4px 10px;">Python · Automatización</span>
+          </div>
+          <div style="font-family:'Newsreader',serif;font-size:27px;color:#fff;">Scripts para Excel</div>
+          <p style="font-size:14px;line-height:1.62;color:#cfcbe0;margin:0;flex:1;">Colección de scripts en Python para automatizar la manipulación de documentos Excel: menos trabajo manual, menos errores.</p>
+          <div style="display:flex;gap:16px;align-items:center;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+            <a href="https://github.com/castellanosfelipe/Scritps-Manipulation-Excel" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">Código ↗</a>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:30px 32px;display:flex;flex-direction:column;gap:14px;" style-hover="border-color:rgba(139,124,246,0.5);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;">P·06</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.06em;color:#8079a0;border:1px solid rgba(255,255,255,0.14);border-radius:999px;padding:4px 10px;">CSS · Diseño</span>
+          </div>
+          <div style="font-family:'Newsreader',serif;font-size:27px;color:#fff;">Concept Site — Alto Nivel</div>
+          <p style="font-size:14px;line-height:1.62;color:#cfcbe0;margin:0;flex:1;">Sitio conceptual de expediciones de alta montaña: dificultad, altitud y precio a la vista desde el primer segundo. HTML, CSS y JS sin frameworks.</p>
+          <div style="display:flex;gap:16px;align-items:center;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+            <a href="https://alto-nivel.netlify.app/" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#fff;background:#5b4bd6;border-radius:999px;padding:7px 15px;text-decoration:none;" style-hover="background:#8b7cf6;">En vivo ↗</a>
+            <a href="https://github.com/castellanosfelipe/Concept-Site-AltoNivel" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">Código ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section id="trayectoria" data-screen-label="Trayectoria" style="max-width:1140px;margin:0 auto;padding:88px 32px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:14px;">Trayectoria</div>
+    <p style="font-family:'Newsreader',serif;font-weight:300;font-size:30px;line-height:1.35;color:#2b2733;margin:0 0 44px;max-width:720px;">Ingeniero electrónico de formación. <span style="font-style:italic;color:#5b4bd6;">Growth por obsesión.</span></p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;">
+      <div style="border-top:2px solid #d8d3e6;padding-top:18px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5b4bd6;margin-bottom:10px;">ACTO I · ENTREGA</div>
+        <p style="font-size:14.5px;line-height:1.62;color:#4a4654;margin:0;">Gestión de proyectos de software B2G y B2B. La base: equipos, alcance y compromisos cumplidos.</p>
+      </div>
+      <div style="border-top:2px solid #b9b1e4;padding-top:18px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5b4bd6;margin-bottom:10px;">ACTO II · PRODUCTO</div>
+        <p style="font-size:14.5px;line-height:1.62;color:#4a4654;margin:0;">Customer Success construido desde cero: producto, operaciones y cliente alineados para subir adopción y engagement.</p>
+      </div>
+      <div style="border-top:2px solid #5b4bd6;padding-top:18px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5b4bd6;margin-bottom:10px;">ACTO III · GROWTH</div>
+        <p style="font-size:14.5px;line-height:1.62;color:#4a4654;margin:0;">Growth Product Manager: analítica, experimentación y pre-venta. Decisiones de producto que se traducen en ingresos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO / FOOTER -->
+  <footer id="contacto" data-screen-label="Contacto" style="background:#17141c;">
+    <div style="max-width:1140px;margin:0 auto;padding:84px 32px 60px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:48px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:'Newsreader',serif;font-weight:300;font-size:38px;line-height:1.18;color:#fff;max-width:540px;">¿Tu SaaS creció pero el embudo se estancó? <span style="font-style:italic;color:#b9b1e4;">Hablemos.</span></div>
+          <div style="display:flex;gap:24px;margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;">
+            <a href="mailto:{{ email }}" style="color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">{{ email }}</a>
+            <a href="https://www.linkedin.com/in/bairon-felipe-peña-castellanos-ab18411b5/" target="_blank" rel="noopener" style="color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">LinkedIn ↗</a>
+            <a href="https://github.com/castellanosfelipe" target="_blank" rel="noopener" style="color:#b9b1e4;text-decoration:none;" style-hover="color:#fff;">GitHub ↗</a>
+          </div>
+        </div>
+        <a href="mailto:{{ email }}" style="flex:none;background:#5b4bd6;color:#fff;font-weight:600;font-size:15px;padding:15px 28px;border-radius:2px;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;" style-hover="background:#8b7cf6;">Escríbeme →</a>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.1);margin-top:56px;padding-top:22px;display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#8079a0;">© 2026 {{ name }} · Bogotá, Colombia</span>
+        <span style="font-family:'Newsreader',serif;font-style:italic;font-size:14px;color:#8079a0;">El crecimiento se compone.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Felipe Peña&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hola@felipepena.co&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const name = (this.props.name ?? "Felipe Peña").trim();
+    const email = this.props.email ?? "hola@felipepena.co";
+    return { name, email };
+  }
+}
+</script>
+</body>
+</html>

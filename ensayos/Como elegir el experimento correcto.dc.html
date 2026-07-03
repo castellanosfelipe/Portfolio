@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    html,body{margin:0;padding:0;background:#f6f5f3;}
+    ::selection{background:#5b4bd6;color:#fff;}
+  </style>
+</helmet>
+<div data-screen-label="Ensayo · Experimentación por etapa" style="min-height:100vh;background:#f6f5f3;font-family:'Newsreader',Georgia,serif;color:#17141c;">
+
+  <nav style="position:sticky;top:0;z-index:50;background:rgba(246,245,243,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #e5e2dc;">
+    <div style="max-width:760px;margin:0 auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;font-family:'Hanken Grotesk',sans-serif;">
+      <a href="../Portafolio Consultoría - Felipe Peña.dc.html#ensayos" style="display:flex;align-items:center;gap:8px;color:#4a4654;text-decoration:none;font-size:14px;font-weight:500;" style-hover="color:#5b4bd6;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+        Felipe Peña
+      </a>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#9b95a6;">ENSAYO 1 DE 4</span>
+    </div>
+    <div ref="{{ progressRef }}" style="position:absolute;bottom:-1px;left:0;height:2px;background:#5b4bd6;width:0%;"></div>
+  </nav>
+
+  <article style="max-width:700px;margin:0 auto;padding:60px 28px 0;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#5b4bd6;display:flex;align-items:center;gap:10px;margin-bottom:22px;">
+      <span>EXPERIMENTACIÓN</span><span style="color:#c9c4d8;">·</span><span style="color:#9b95a6;">5 min de lectura</span>
+    </div>
+    <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(34px,5vw,50px);line-height:1.15;letter-spacing:-0.01em;margin:0;">Cómo elegir el experimento correcto según la etapa de tu producto</h1>
+    <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:20px;line-height:1.5;color:#4a4654;margin:22px 0 0;max-width:580px;">Cuándo hacer A/B tests, cuándo innovar, y cómo alinear tus experimentos con la etapa de tu producto.</p>
+
+    <div style="height:1px;background:#e5e2dc;margin:40px 0;"></div>
+
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Llevo años trabajando en producto y hay algo que veo repetirse en casi todos los equipos: experimentan mucho y piensan poco. Corren diez A/B tests al mes sobre una base de usuarios que no da para uno solo. Nadie calculó cuánto tiempo necesita el test para llegar a significancia. Y todo, absolutamente todo, tiene que ser un A/B test, como si no existiera otra herramienta.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">El resultado es un roadmap de experimentación que parece serio pero no aprende nada.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Antes de decidir qué experimento correr hay tres preguntas previas. En qué etapa está tu producto. Cuánto tráfico tienes de verdad. Y cuánto tiempo puedes esperar para validar la hipótesis. Si no puedes responder esas tres, el resto es teatro.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">En este ensayo voy a lo primero, que es lo que casi nadie hace: conectar el tipo de experimento con la etapa del producto.</p>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">La etapa del producto define qué experimentos tienen sentido</h2>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Lo que funciona para un producto que busca tracción es una pérdida de tiempo para uno en escala. Y al revés.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Para verlo, imagina un gráfico de dos ejes. En el horizontal, la madurez del producto: desde los primeros días, antes de encontrar product-market fit, hasta las fases de crecimiento y escala. En el vertical, el tipo de experimento: abajo las optimizaciones chicas (un test de copy, un ajuste de botón), arriba la innovación (features nuevas, productos nuevos).</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">La curva que une esos dos ejes cuenta toda la historia.</p>
+
+    <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:30px 32px 26px;margin:8px 0 40px;box-shadow:0 1px 2px rgba(20,16,30,0.04);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9b95a6;">Figura · Enfoque según etapa del producto</div>
+      <svg viewBox="0 0 640 260" style="width:100%;height:auto;display:block;margin-top:16px;">
+        <line x1="70" y1="20" x2="70" y2="220" stroke="#e5e2dc" stroke-width="1"></line>
+        <line x1="70" y1="220" x2="600" y2="220" stroke="#e5e2dc" stroke-width="1"></line>
+        <text x="60" y="28" font-family="IBM Plex Mono" font-size="10" fill="#9b95a6" text-anchor="end">Innovación</text>
+        <text x="60" y="216" font-family="IBM Plex Mono" font-size="10" fill="#9b95a6" text-anchor="end">Optimización</text>
+        <path d="M100,58 C160,80 200,100 260,121 C320,142 360,165 420,184 C470,198 500,150 560,103 L560,220 L100,220 Z" fill="#5b4bd6" fill-opacity="0.08"></path>
+        <path d="M100,58 C160,80 200,100 260,121 C320,142 360,165 420,184 C470,198 500,150 560,103" fill="none" stroke="#5b4bd6" stroke-width="2.5"></path>
+        <circle cx="100" cy="58" r="5" fill="#5b4bd6"></circle>
+        <circle cx="260" cy="121" r="5" fill="#5b4bd6"></circle>
+        <circle cx="420" cy="184" r="5" fill="#5b4bd6"></circle>
+        <circle cx="560" cy="103" r="5" fill="#5b4bd6"></circle>
+        <text x="100" y="240" font-family="IBM Plex Mono" font-size="10.5" fill="#4a4654" text-anchor="middle">Pre-PMF</text>
+        <text x="260" y="240" font-family="IBM Plex Mono" font-size="10.5" fill="#4a4654" text-anchor="middle">Fase 1</text>
+        <text x="420" y="240" font-family="IBM Plex Mono" font-size="10.5" fill="#4a4654" text-anchor="middle">Fase 2</text>
+        <text x="560" y="240" font-family="IBM Plex Mono" font-size="10.5" fill="#4a4654" text-anchor="middle">Fase 3</text>
+        <text x="100" y="253" font-family="Hanken Grotesk" font-size="9.5" fill="#9b95a6" text-anchor="middle">Descubrimiento</text>
+        <text x="260" y="253" font-family="Hanken Grotesk" font-size="9.5" fill="#9b95a6" text-anchor="middle">Robustecer</text>
+        <text x="420" y="253" font-family="Hanken Grotesk" font-size="9.5" fill="#9b95a6" text-anchor="middle">Micro-optimizar</text>
+        <text x="560" y="253" font-family="Hanken Grotesk" font-size="9.5" fill="#9b95a6" text-anchor="middle">Nueva curva</text>
+      </svg>
+      <p style="font-family:'Hanken Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#6c6776;margin:16px 0 0;">La proporción entre innovar y optimizar cambia según la madurez del producto — nunca es cero de un lado.</p>
+    </div>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">Antes del product-market fit: crear valor, no pulirlo</h2>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Si todavía no tienes PMF, optimizar es acomodar las sillas de un barco que quizás no flota. En esta etapa casi todas tus apuestas deberían ir a innovación: construir, probar y descartar propuestas de valor hasta dar con algo que los usuarios quieran de verdad.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">No tiene sentido perfeccionar el onboarding de un producto que nadie necesita. Acá el trabajo es descubrimiento puro.</p>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">Después del PMF: tres fases distintas</h2>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">Fase 1 · Robustecer</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Encontraste PMF. Los usuarios validan lo que construiste. Pero llegaste corriendo y el producto tiene costuras por todos lados. La experiencia está lejos de su potencial.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Esta fase pide bastante optimización para arreglar lo evidente, más algo de innovación puntual para fortalecer la propuesta de valor central. Fortalecerla, no expandirla. Todavía no.</p>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">Fase 2 · Micro-optimizar</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">En algún momento el uso del producto se vuelve predecible. Ya conoces a tus usuarios y sabes cuáles son tus palancas. Lo grande y obvio ya se optimizó, lo roto ya se arregló.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Acá el juego cambia a precisión: micro-optimizaciones que sumadas exprimen el máximo de la experiencia. Es la etapa menos glamorosa, pero es donde la disciplina experimental más rinde, porque por fin tienes el volumen de usuarios para detectar efectos pequeños en un A/B test.</p>
+
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#5b4bd6;margin:34px 0 10px;">Fase 3 · El ciclo se reinicia</div>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Ningún producto crece para siempre con las mismas palancas. Para sostener la escala hay que salir a buscar oportunidades nuevas: otros segmentos, otros casos de uso, otros productos. La balanza vuelve a inclinarse hacia la innovación. En cierto modo vuelves al espíritu de los primeros días, solo que ahora con más recursos y más datos.</p>
+
+    <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:32px;line-height:1.25;color:#17141c;margin:56px 0 18px;letter-spacing:-0.01em;border-top:1px solid #e5e2dc;padding-top:28px;">No es binario, es proporción</h2>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Aclaración importante: en ninguna etapa haces solo una cosa. Siempre estás innovando y optimizando a la vez. La decisión estratégica está en la proporción, en cuánto peso le das a cada tipo de apuesta según el momento del producto. Eso es lo que distingue a un equipo maduro de uno que corre tests por inercia.</p>
+    <p style="font-size:18.5px;line-height:1.75;color:#2b2733;margin:0 0 22px;">Experimentar bien no empieza en la herramienta de testing. Empieza en el diagnóstico honesto de dónde estás parado.</p>
+
+    <div style="margin-top:64px;border-top:1px solid #e5e2dc;padding-top:36px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#9b95a6;margin-bottom:24px;">Preguntas frecuentes</div>
+      <div style="margin-bottom:26px;"><div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:#17141c;margin-bottom:8px;">¿Todo experimento debe ser un A/B test?</div><p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.6;color:#4a4654;margin:0;">No. El A/B test sirve cuando tienes tráfico suficiente y quieres medir efectos incrementales. Con pocos usuarios o hipótesis grandes, las entrevistas, los prototipos, los smoke tests o los lanzamientos controlados suelen funcionar mejor.</p></div>
+      <div style="margin-bottom:26px;"><div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:#17141c;margin-bottom:8px;">¿Cuándo optimizar y cuándo innovar?</div><p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.6;color:#4a4654;margin:0;">Antes del PMF, innova para construir valor. Después, sube progresivamente la dosis de optimización. Y cuando el crecimiento se estanque, vuelve a innovar para abrir oportunidades nuevas.</p></div>
+      <div><div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:17px;color:#17141c;margin-bottom:8px;">¿Qué necesito saber antes de diseñar un experimento?</div><p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.6;color:#4a4654;margin:0;">Tres cosas: la etapa de tu producto, tu tamaño de muestra real y el tiempo que puedes dedicar a validar la hipótesis. Esos tres factores determinan qué tipo de experimento tiene sentido.</p></div>
+    </div>
+  </article>
+
+  <footer style="background:#17141c;margin-top:80px;">
+    <div style="max-width:700px;margin:0 auto;padding:64px 28px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div style="font-family:'Newsreader',serif;font-weight:300;font-style:italic;font-size:20px;color:#b9b1e4;">¿Trabajas en producto? Hablemos.</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="mailto:hola@felipepena.co" style="background:#5b4bd6;color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;padding:12px 22px;border-radius:999px;text-decoration:none;" style-hover="background:#8b7cf6;">Escríbeme →</a>
+        <a href="../Portafolio Consultoría - Felipe Peña.dc.html#ensayos" style="border:1px solid rgba(255,255,255,0.2);color:#b9b1e4;font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:14px;padding:12px 22px;border-radius:999px;text-decoration:none;" style-hover="border-color:#8b7cf6;color:#fff;">Más ensayos</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  onProgressRef = (el) => {
+    if (!el || this._wired) return;
+    this._wired = true;
+    const update = () => {
+      const h = document.documentElement;
+      const scrollTop = h.scrollTop || document.body.scrollTop;
+      const height = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+      const pct = height > 0 ? Math.min(100, (scrollTop / height) * 100) : 0;
+      el.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  };
+
+  renderVals() {
+    return { progressRef: this.onProgressRef };
+  }
+}
+</script>
+</body>
+</html>

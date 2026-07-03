@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<style>
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @media print {
+    html, body { margin: 0 !important; padding: 0 !important; background: #e8e6ea !important; }
+    #dc-root, #dc-root > div { display: block !important; width: max-content !important; }
+    #dc-root > div > div {
+      display: block !important; padding: 0 !important; gap: 0 !important;
+      width: auto !important; min-width: 0 !important; min-height: 0 !important;
+      background: #e8e6ea !important;
+    }
+    #dc-root > div > div > section { margin: 0 !important; break-inside: avoid; }
+    #dc-root > div > div > section:last-of-type { break-after: auto !important; }
+    button { display: none !important; }
+    *, *::before, *::after {
+      animation-play-state: paused !important; transition: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;background:#e8e6ea;}
+    ::selection{background:#5b4bd6;color:#fff;}
+    image-slot{display:block;width:100%;height:100%;}
+  </style>
+</helmet>
+<div style="width:max-content;min-width:100%;min-height:100vh;background:#e8e6ea;padding:56px;font-family:'Hanken Grotesk',-apple-system,sans-serif;color:#17141c;display:flex;flex-direction:column;align-items:flex-start;gap:60px;">
+
+  <!-- ════════════════ PORTADA ════════════════ -->
+  <section data-screen-label="Portada" style="width:1180px;display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;align-items:baseline;gap:16px;padding:0 4px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#6f6a7d;">SISTEMA DE MARCA · V. FINAL</span>
+      <span style="height:1px;flex:1;background:#cfccd4;"></span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;color:#6f6a7d;">2026</span>
+    </div>
+    <div style="background:#17141c;border-radius:4px;padding:80px 72px 64px;color:#fff;box-shadow:0 30px 60px -34px rgba(15,13,22,0.45);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#8079a0;">Marca personal</div>
+      <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:104px;line-height:0.98;letter-spacing:-0.025em;margin:28px 0 0;color:#fff;">{{ name }}</h1>
+      <div style="display:flex;align-items:center;gap:18px;margin-top:26px;">
+        <span style="width:46px;height:2px;background:#8b7cf6;"></span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:#b9b1e4;">{{ role }}</span>
+      </div>
+      <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:30px;line-height:1.35;color:#cfcbe0;margin:36px 0 0;max-width:620px;">«El crecimiento no se hackea. Se compone.»</p>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:64px;gap:60px;">
+        <div style="flex:1;max-width:460px;">
+          <div style="display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);padding:11px 0;font-size:13.5px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;letter-spacing:0.1em;">01</span><span style="color:#e8e6f0;">Plataforma de marca</span></div>
+          <div style="display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);padding:11px 0;font-size:13.5px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;letter-spacing:0.1em;">02</span><span style="color:#e8e6f0;">Identidad visual</span></div>
+          <div style="display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);padding:11px 0;font-size:13.5px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;letter-spacing:0.1em;">03</span><span style="color:#e8e6f0;">Kit de LinkedIn</span></div>
+          <div style="display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);padding:11px 0;font-size:13.5px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;letter-spacing:0.1em;">04</span><span style="color:#e8e6f0;">Sitio web</span></div>
+          <div style="display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.12);border-bottom:1px solid rgba(255,255,255,0.12);padding:11px 0;font-size:13.5px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;letter-spacing:0.1em;">05</span><span style="color:#e8e6f0;">Aplicaciones</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:10px;flex:none;">
+          <div style="width:24px;height:7px;background:rgba(139,124,246,0.14);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:9px;background:rgba(139,124,246,0.2);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:12px;background:rgba(139,124,246,0.27);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:16px;background:rgba(139,124,246,0.35);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:21px;background:rgba(139,124,246,0.44);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:28px;background:rgba(139,124,246,0.54);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:37px;background:rgba(139,124,246,0.65);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:49px;background:rgba(139,124,246,0.77);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:64px;background:rgba(139,124,246,0.89);border-radius:2px 2px 0 0;"></div>
+          <div style="width:24px;height:85px;background:#8b7cf6;border-radius:2px 2px 0 0;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ 01 · PLATAFORMA ════════════════ -->
+  <section data-screen-label="01 Plataforma" style="width:1180px;display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;align-items:baseline;gap:16px;padding:0 4px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#6f6a7d;">01 · PLATAFORMA DE MARCA</span>
+      <span style="height:1px;flex:1;background:#cfccd4;"></span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:16px;color:#4a4654;">Qué dice, a quién y por qué</span>
+    </div>
+    <div style="background:#f6f5f3;border:1px solid #e3e0db;border-radius:4px;overflow:hidden;box-shadow:0 1px 2px rgba(20,16,30,0.04),0 30px 60px -34px rgba(20,16,30,0.22);">
+
+      <div style="padding:64px 72px 56px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;">Posicionamiento</div>
+        <p style="font-family:'Newsreader',serif;font-weight:300;font-size:42px;line-height:1.22;letter-spacing:-0.01em;color:#17141c;margin:24px 0 0;max-width:900px;">Convierto fricción de usuario en <span style="font-style:italic;color:#5b4bd6;">retención e ingresos</span> para SaaS B2B y B2G — un experimento a la vez.</p>
+        <p style="font-size:16px;line-height:1.6;color:#4a4654;margin:22px 0 0;max-width:640px;">Para fundadores y equipos de producto que ya validaron su producto y ahora necesitan que crezca.</p>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:28px;">La historia · tres actos</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;">
+          <div style="border-top:2px solid #d8d3e6;padding-top:18px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5b4bd6;margin-bottom:10px;">ACTO I</div>
+            <div style="font-family:'Newsreader',serif;font-size:24px;color:#17141c;">Entrega</div>
+            <p style="font-size:14px;line-height:1.6;color:#4a4654;margin:10px 0 0;">Proyectos de software B2G y B2B: alcance, equipos, fechas. Aprendí a entregar bien — y a ver que entregar no basta.</p>
+          </div>
+          <div style="border-top:2px solid #b9b1e4;padding-top:18px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5b4bd6;margin-bottom:10px;">ACTO II</div>
+            <div style="font-family:'Newsreader',serif;font-size:24px;color:#17141c;">Producto</div>
+            <p style="font-size:14px;line-height:1.6;color:#4a4654;margin:10px 0 0;">Cerca del usuario: fricción, feedback y mejoras que sostienen la retención. Customer Success construido desde cero.</p>
+          </div>
+          <div style="border-top:2px solid #5b4bd6;padding-top:18px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5b4bd6;margin-bottom:10px;">ACTO III</div>
+            <div style="font-family:'Newsreader',serif;font-size:24px;color:#17141c;">Growth</div>
+            <p style="font-size:14px;line-height:1.6;color:#4a4654;margin:10px 0 0;">Analítica, experimentación y pre-venta: cada decisión de producto se traduce en adopción e ingresos. Hoy, 100% Growth PM.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px;display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:start;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:20px;">Manifiesto</div>
+          <p style="font-family:'Newsreader',serif;font-weight:400;font-size:23px;line-height:1.62;color:#2b2733;margin:0;">Empecé entregando software a tiempo. Terminé obsesionado con lo que ocurre <span style="color:#5b4bd6;font-style:italic;">después</span> del lanzamiento: por qué un usuario se queda, dónde se atasca y qué lo hace volver. Hoy convierto esa fricción en retención —y los datos en decisiones— un experimento a la vez.</p>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:20px;">Principios</div>
+          <div style="display:flex;flex-direction:column;">
+            <div style="padding:16px 0;border-top:1px solid #e9e6e1;display:flex;gap:16px;align-items:baseline;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5b4bd6;">01</span>
+              <div><div style="font-weight:600;font-size:16px;">Producto profundo</div><div style="font-size:13.5px;color:#6c6776;margin-top:3px;line-height:1.45;">Entender al usuario antes que la feature.</div></div>
+            </div>
+            <div style="padding:16px 0;border-top:1px solid #e9e6e1;display:flex;gap:16px;align-items:baseline;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5b4bd6;">02</span>
+              <div><div style="font-weight:600;font-size:16px;">Decisiones con datos</div><div style="font-size:13.5px;color:#6c6776;margin-top:3px;line-height:1.45;">El embudo dicta dónde mirar.</div></div>
+            </div>
+            <div style="padding:16px 0;border-top:1px solid #e9e6e1;border-bottom:1px solid #e9e6e1;display:flex;gap:16px;align-items:baseline;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5b4bd6;">03</span>
+              <div><div style="font-weight:600;font-size:16px;">Crecimiento compuesto</div><div style="font-size:13.5px;color:#6c6776;margin-top:3px;line-height:1.45;">Pequeños experimentos que se acumulan.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px 64px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:28px;">Voz · cómo escribe esta marca</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;padding:26px 30px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#2f6f4f;margin-bottom:16px;">SÍ</div>
+            <div style="display:flex;flex-direction:column;gap:12px;font-size:14.5px;line-height:1.55;color:#2b2733;">
+              <div style="display:flex;gap:12px;"><span style="color:#2f6f4f;flex:none;">·</span>Primera persona y verbos concretos.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#2f6f4f;flex:none;">·</span>Un dato por idea; contexto antes que cifra.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#2f6f4f;flex:none;">·</span>Historias de fricción real y cómo se resolvió.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#2f6f4f;flex:none;">·</span>Cerrar con un aprendizaje accionable.</div>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;padding:26px 30px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;color:#b0483a;margin-bottom:16px;">NO</div>
+            <div style="display:flex;flex-direction:column;gap:12px;font-size:14.5px;line-height:1.55;color:#2b2733;">
+              <div style="display:flex;gap:12px;"><span style="color:#b0483a;flex:none;">·</span>Jerga vacía: «sinergias», «disrupción», «game-changer».</div>
+              <div style="display:flex;gap:12px;"><span style="color:#b0483a;flex:none;">·</span>«Hacks» y promesas sin evidencia.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#b0483a;flex:none;">·</span>Métricas de vanidad sin historia detrás.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#b0483a;flex:none;">·</span>Humo motivacional genérico.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════ 02 · IDENTIDAD ════════════════ -->
+  <section data-screen-label="02 Identidad" style="width:1180px;display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;align-items:baseline;gap:16px;padding:0 4px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#6f6a7d;">02 · IDENTIDAD VISUAL</span>
+      <span style="height:1px;flex:1;background:#cfccd4;"></span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:16px;color:#4a4654;">Logo, color, tipografía y motivo</span>
+    </div>
+    <div style="background:#f6f5f3;border:1px solid #e3e0db;border-radius:4px;overflow:hidden;box-shadow:0 1px 2px rgba(20,16,30,0.04),0 30px 60px -34px rgba(20,16,30,0.22);">
+
+      <div style="padding:56px 72px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:26px;">Sistema de logotipo</div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:18px;">
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;height:172px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:'Newsreader',serif;font-weight:300;font-size:34px;letter-spacing:-0.01em;">{{ name }}</span>
+          </div>
+          <div style="background:#17141c;border-radius:4px;height:172px;display:flex;align-items:center;justify-content:center;">
+            <span style="width:84px;height:84px;border:1.5px solid #b9b1e4;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:30px;color:#fff;">{{ initials }}</span>
+          </div>
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;height:172px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+            <span style="font-family:'Newsreader',serif;font-weight:300;font-size:27px;">{{ name }}</span>
+            <span style="width:40px;height:1px;background:#5b4bd6;"></span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.22em;color:#6c6776;">GROWTH PM</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:18px;margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.06em;color:#9b95a6;">
+          <span>Logotipo primario · firmas y cabeceras</span><span>Monograma · avatar y favicon</span><span>Lockup vertical · cierres</span>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:26px;">Paleta cromática · proporción de uso</div>
+        <div style="display:flex;gap:18px;">
+          <div style="flex:1;">
+            <div style="height:120px;background:#f6f5f3;border:1px solid #e3e0db;border-radius:3px;"></div>
+            <div style="font-weight:600;font-size:13px;margin-top:12px;">Papel · Fondo</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8b86a0;margin-top:2px;">#F6F5F3 · 60%</div>
+          </div>
+          <div style="flex:1;">
+            <div style="height:120px;background:#17141c;border-radius:3px;"></div>
+            <div style="font-weight:600;font-size:13px;margin-top:12px;">Tinta · Texto</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8b86a0;margin-top:2px;">#17141C · 25%</div>
+          </div>
+          <div style="flex:1;">
+            <div style="height:120px;background:#5b4bd6;border-radius:3px;"></div>
+            <div style="font-weight:600;font-size:13px;margin-top:12px;">Violeta · Acento</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8b86a0;margin-top:2px;">#5B4BD6 · 10%</div>
+          </div>
+          <div style="flex:1;">
+            <div style="height:120px;background:#b9b1e4;border-radius:3px;"></div>
+            <div style="font-weight:600;font-size:13px;margin-top:12px;">Lila · Soporte</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8b86a0;margin-top:2px;">#B9B1E4 · 5%</div>
+          </div>
+        </div>
+        <div style="display:flex;height:10px;border-radius:999px;overflow:hidden;margin-top:26px;">
+          <div style="width:60%;background:#efede9;"></div>
+          <div style="width:25%;background:#17141c;"></div>
+          <div style="width:10%;background:#5b4bd6;"></div>
+          <div style="width:5%;background:#b9b1e4;"></div>
+        </div>
+        <p style="font-size:13px;color:#6c6776;margin:12px 0 0;line-height:1.5;">El violeta es tinta escasa: titulares clave, enlaces y un solo acento por composición. Nunca fondos completos salvo piezas dark (portadas, banners).</p>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:44px;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:22px;">Display</div>
+          <div style="font-family:'Newsreader',serif;font-weight:300;font-size:76px;line-height:0.9;">Aa</div>
+          <div style="font-family:'Newsreader',serif;font-size:24px;margin-top:14px;">Newsreader</div>
+          <div style="font-size:13px;color:#6c6776;margin-top:4px;line-height:1.5;">Serif editorial · 300/400 + itálica. Titulares, citas y manifiestos.</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:22px;">Texto</div>
+          <div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:76px;line-height:0.9;">Aa</div>
+          <div style="font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:24px;margin-top:14px;">Hanken Grotesk</div>
+          <div style="font-size:13px;color:#6c6776;margin-top:4px;line-height:1.5;">Grotesca neutra · 400–700. Cuerpo, interfaz y listas.</div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:22px;">Detalle</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:76px;line-height:0.9;">Aa</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:24px;margin-top:14px;">IBM Plex Mono</div>
+          <div style="font-size:13px;color:#6c6776;margin-top:4px;line-height:1.5;">Mono técnica · 400/500. Etiquetas, cifras y metadatos.</div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px 64px;display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:18px;">Motivo gráfico · la curva compuesta</div>
+          <p style="font-size:14.5px;line-height:1.65;color:#4a4654;margin:0;">Barras que crecen en progresión geométrica: el interés compuesto aplicado a producto. Se usa como firma visual en portadas, banners y cierres — siempre alineada a la base, nunca como gráfico de datos real.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;padding:36px 40px;display:flex;align-items:flex-end;gap:10px;height:180px;">
+          <div style="width:26px;height:8px;background:rgba(91,75,214,0.12);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:11px;background:rgba(91,75,214,0.18);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:15px;background:rgba(91,75,214,0.25);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:20px;background:rgba(91,75,214,0.33);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:27px;background:rgba(91,75,214,0.43);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:36px;background:rgba(91,75,214,0.54);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:48px;background:rgba(91,75,214,0.67);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:64px;background:rgba(91,75,214,0.82);border-radius:2px 2px 0 0;"></div>
+          <div style="width:26px;height:85px;background:#5b4bd6;border-radius:2px 2px 0 0;"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════ 03 · KIT DE LINKEDIN ════════════════ -->
+  <section data-screen-label="03 Kit de LinkedIn" style="width:1180px;display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;align-items:baseline;gap:16px;padding:0 4px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#6f6a7d;">03 · KIT DE LINKEDIN</span>
+      <span style="height:1px;flex:1;background:#cfccd4;"></span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:16px;color:#4a4654;">Banner, titular, «Acerca de» y contenido</span>
+    </div>
+    <div style="background:#f6f5f3;border:1px solid #e3e0db;border-radius:4px;overflow:hidden;box-shadow:0 1px 2px rgba(20,16,30,0.04),0 30px 60px -34px rgba(20,16,30,0.22);">
+
+      <div style="padding:56px 72px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:26px;">Banner · 1584×396</div>
+        <div style="width:100%;aspect-ratio:1584/396;background:#17141c;border-radius:6px;overflow:hidden;position:relative;display:flex;align-items:center;padding:0 72px;">
+          <div style="position:relative;z-index:1;">
+            <div style="font-family:'Newsreader',serif;font-weight:300;font-size:48px;letter-spacing:-0.02em;color:#fff;">{{ name }}</div>
+            <div style="font-family:'Newsreader',serif;font-style:italic;font-size:22px;color:#b9b1e4;margin-top:10px;">El crecimiento no se hackea. Se compone.</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.2em;color:#8079a0;margin-top:18px;">GROWTH PRODUCT MANAGER · SAAS B2B / B2G</div>
+          </div>
+          <div style="position:absolute;right:72px;bottom:0;display:flex;align-items:flex-end;gap:9px;">
+            <div style="width:22px;height:12px;background:rgba(139,124,246,0.16);border-radius:2px 2px 0 0;"></div>
+            <div style="width:22px;height:17px;background:rgba(139,124,246,0.24);border-radius:2px 2px 0 0;"></div>
+            <div style="width:22px;height:24px;background:rgba(139,124,246,0.33);border-radius:2px 2px 0 0;"></div>
+            <div style="width:22px;height:34px;background:rgba(139,124,246,0.45);border-radius:2px 2px 0 0;"></div>
+            <div style="width:22px;height:48px;background:rgba(139,124,246,0.6);border-radius:2px 2px 0 0;"></div>
+            <div style="width:22px;height:67px;background:rgba(139,124,246,0.78);border-radius:2px 2px 0 0;"></div>
+            <div style="width:22px;height:94px;background:#8b7cf6;border-radius:2px 2px 0 0;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px;display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:start;">
+        <div style="background:#fff;border:1px solid #e6e3de;border-radius:8px;overflow:hidden;">
+          <div style="height:86px;background:#17141c;position:relative;overflow:hidden;">
+            <div style="position:absolute;right:24px;bottom:0;display:flex;align-items:flex-end;gap:5px;">
+              <div style="width:12px;height:8px;background:rgba(139,124,246,0.2);"></div>
+              <div style="width:12px;height:13px;background:rgba(139,124,246,0.35);"></div>
+              <div style="width:12px;height:21px;background:rgba(139,124,246,0.55);"></div>
+              <div style="width:12px;height:33px;background:#8b7cf6;"></div>
+            </div>
+            <div style="position:absolute;left:26px;top:50%;transform:translateY(-50%);font-family:'Newsreader',serif;font-style:italic;font-size:15px;color:#b9b1e4;">El crecimiento se compone.</div>
+          </div>
+          <div style="padding:0 28px 26px;">
+            <div style="width:104px;height:104px;border-radius:50%;border:4px solid #fff;margin-top:-52px;position:relative;background:#efede9;">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="foto-perfil-linkedin" shape="circle" placeholder="Tu foto" hint-size="96px,96px" style="width:96px;height:96px;display:block;"></x-import>
+            </div>
+            <div style="font-family:'Newsreader',serif;font-weight:400;font-size:27px;margin-top:14px;">{{ name }}</div>
+            <div style="font-size:14.5px;color:#2b2733;line-height:1.5;margin-top:5px;">Growth Product Manager · Convierto fricción de usuario en retención e ingresos · SaaS B2B / B2G</div>
+            <div style="font-size:13px;color:#8b86a0;margin-top:8px;">Bogotá, Colombia · 500+ contactos</div>
+            <div style="border-top:1px solid #eceaf0;margin-top:18px;padding-top:16px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <span style="font-weight:600;font-size:14px;">Acerca de</span>
+                <button onClick="{{ copyAbout }}" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;color:#5b4bd6;background:#fff;border:1px solid #cfc9dd;border-radius:999px;padding:6px 13px;cursor:pointer;" style-hover="background:#5b4bd6;color:#fff;border-color:#5b4bd6;">{{ copyAboutLabel }}</button>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;line-height:1.62;color:#3a3644;">
+                <p style="margin:0;">Empecé gestionando entregas de software. Hoy me obsesiona algo más difícil de mover: por qué un producto crece.</p>
+                <p style="margin:0;">Liderando proyectos B2G y B2B evolucioné de la entrega hacia el producto y el growth: cerca del usuario, detectando fricción y convirtiendo el feedback en mejoras que sostienen la retención y el valor a largo plazo.</p>
+                <p style="margin:0;">Construí estrategias de Customer Success desde cero —alineando producto, operaciones y cliente para subir adopción y engagement— y trabajo con ventas en la pre-venta, así que entiendo cómo cada decisión de producto se traduce en ingresos.</p>
+                <p style="margin:0;">Mi método es simple: entender al usuario, encontrar el cuello de botella del embudo y mejorar de forma continua con datos. Hoy, 100% como Growth Product Manager, combino producto, analítica y experimentación para escalar SaaS con impacto.</p>
+                <p style="margin:0;font-weight:600;color:#17141c;">¿Tu SaaS creció pero el embudo se estancó? Hablemos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:28px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;">Titular final</span>
+              <button onClick="{{ copyHeadline }}" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;color:#5b4bd6;background:#fff;border:1px solid #cfc9dd;border-radius:999px;padding:6px 13px;cursor:pointer;" style-hover="background:#5b4bd6;color:#fff;border-color:#5b4bd6;">{{ copyHeadlineLabel }}</button>
+            </div>
+            <div style="background:#fff;border:1px solid #d8d3e6;border-left:3px solid #5b4bd6;border-radius:4px;padding:18px 20px;font-size:15px;line-height:1.55;color:#17141c;">Growth Product Manager · Convierto fricción de usuario en retención e ingresos · SaaS B2B / B2G</div>
+            <div style="font-size:12.5px;color:#8b86a0;line-height:1.6;margin-top:12px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;">ALT B</span> · Escalo SaaS con data, insights de usuario y optimización de funnels<br><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;">ALT C</span> · De la entrega al growth: producto, analítica y experimentación</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:14px;">Guía de foto</div>
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.55;color:#3a3644;">
+              <div style="display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">·</span>Luz natural frontal, fondo neutro claro.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">·</span>Encuadre pecho-arriba, mirada a cámara.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">·</span>La misma foto en todas las plataformas.</div>
+              <div style="display:flex;gap:12px;"><span style="color:#5b4bd6;flex:none;">·</span>Arrastra tu foto real al círculo del perfil ←</div>
+            </div>
+          </div>
+          <div style="background:#f1eff5;border:1px solid #e0dce8;border-radius:4px;padding:18px 20px;font-size:13px;line-height:1.6;color:#4a4654;"><strong style="font-weight:600;color:#17141c;">Pendiente:</strong> suma 2–3 métricas reales (retención, adopción, NRR) al «Acerca de» y a Destacados. Es lo que más convence a fundadores y C-level.</div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #e9e6e1;padding:54px 72px 64px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:8px;">Pilares de contenido · thought leadership</div>
+        <p style="font-size:14px;color:#6c6776;margin:0 0 26px;">Tres series recurrentes. Cada post pertenece a una — así la audiencia sabe qué esperar y tú nunca empiezas de cero.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;">
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;padding:26px 28px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;color:#5b4bd6;margin-bottom:12px;">SERIE 01</div>
+            <div style="font-family:'Newsreader',serif;font-size:23px;line-height:1.15;">Fricción → Retención</div>
+            <p style="font-size:13.5px;line-height:1.55;color:#6c6776;margin:10px 0 16px;">Historias reales de fricción convertidas en mejoras de producto.</p>
+            <div style="border-top:1px solid #eceaf0;padding-top:14px;font-size:13px;line-height:1.6;color:#3a3644;font-style:italic;font-family:'Newsreader',serif;">«El onboarding que nadie terminaba (y el dato que lo delató)»<br>«La feature más pedida que nadie usó»</div>
+          </div>
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;padding:26px 28px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;color:#5b4bd6;margin-bottom:12px;">SERIE 02</div>
+            <div style="font-family:'Newsreader',serif;font-size:23px;line-height:1.15;">Anatomía del embudo</div>
+            <p style="font-size:13.5px;line-height:1.55;color:#6c6776;margin:10px 0 16px;">Desarmar embudos de SaaS paso a paso, con datos.</p>
+            <div style="border-top:1px solid #eceaf0;padding-top:14px;font-size:13px;line-height:1.6;color:#3a3644;font-style:italic;font-family:'Newsreader',serif;">«Dónde se muere tu activación: cuatro cuellos de botella típicos»<br>«Retención: la métrica que financia todo lo demás»</div>
+          </div>
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:4px;padding:26px 28px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;color:#5b4bd6;margin-bottom:12px;">SERIE 03</div>
+            <div style="font-family:'Newsreader',serif;font-size:23px;line-height:1.15;">Experimentos que componen</div>
+            <p style="font-size:13.5px;line-height:1.55;color:#6c6776;margin:10px 0 16px;">Experimentos pequeños, efecto acumulado — con método.</p>
+            <div style="border-top:1px solid #eceaf0;padding-top:14px;font-size:13px;line-height:1.6;color:#3a3644;font-style:italic;font-family:'Newsreader',serif;">«Doce experimentos, una curva: lo que queda tras un trimestre»<br>«Cómo priorizo hipótesis cuando todo parece urgente»</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════ 04 · SITIO WEB ════════════════ -->
+  <section data-screen-label="04 Sitio web" style="width:1180px;display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;align-items:baseline;gap:16px;padding:0 4px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#6f6a7d;">04 · SITIO WEB</span>
+      <span style="height:1px;flex:1;background:#cfccd4;"></span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:16px;color:#4a4654;">felipepena.co · página completa</span>
+    </div>
+
+    <div style="border:1px solid #d8d4de;border-radius:10px;overflow:hidden;background:#fdfdfc;box-shadow:0 30px 60px -34px rgba(20,16,30,0.3);">
+      <div style="display:flex;align-items:center;gap:8px;padding:13px 18px;background:#efedf2;border-bottom:1px solid #e2dfe7;">
+        <span style="width:11px;height:11px;border-radius:50%;background:#d5d1dc;"></span>
+        <span style="width:11px;height:11px;border-radius:50%;background:#d5d1dc;"></span>
+        <span style="width:11px;height:11px;border-radius:50%;background:#d5d1dc;"></span>
+        <span style="margin:0 auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9a93b0;background:#fff;border:1px solid #e2dfe7;border-radius:6px;padding:5px 60px;">felipepena.co</span>
+      </div>
+
+      <div style="padding:30px 56px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #f0eef2;">
+        <span style="font-family:'Newsreader',serif;font-size:22px;">{{ name }}</span>
+        <div style="display:flex;gap:32px;font-size:14px;color:#4a4654;font-weight:500;align-items:center;"><span>Ensayos</span><span>Método</span><span>Trayectoria</span><span style="color:#fff;background:#17141c;border-radius:999px;padding:9px 18px;">Hablemos</span></div>
+      </div>
+
+      <div style="padding:84px 56px 76px;display:flex;gap:64px;align-items:center;justify-content:space-between;">
+        <div style="max-width:600px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b4bd6;margin-bottom:26px;">Growth · Producto · Datos</div>
+          <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:64px;line-height:1.04;letter-spacing:-0.02em;margin:0;">El crecimiento no se hackea. <span style="font-style:italic;color:#5b4bd6;">Se compone.</span></h2>
+          <p style="font-size:17px;line-height:1.62;color:#4a4654;margin:26px 0 0;max-width:500px;">Ensayos y método de un Growth Product Manager: usuarios, fricción y los experimentos que se acumulan hasta mover la curva.</p>
+          <div style="display:flex;gap:14px;margin-top:36px;align-items:center;">
+            <span style="background:#5b4bd6;color:#fff;font-weight:600;font-size:15px;padding:14px 26px;border-radius:2px;">Leer los ensayos →</span>
+            <span style="font-weight:600;font-size:15px;color:#17141c;border-bottom:2px solid #b9b1e4;padding-bottom:4px;">El método</span>
+          </div>
+        </div>
+        <div style="flex:none;position:relative;">
+          <div style="position:absolute;left:-14px;top:-14px;right:14px;bottom:14px;border:1px solid #d8d3e6;border-radius:10px;"></div>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="retrato-web" shape="rounded" radius="8" placeholder="Retrato editorial" hint-size="280px,330px" style="width:280px;height:330px;display:block;position:relative;"></x-import>
+        </div>
+      </div>
+
+      <div style="background:#f6f5f3;border-top:1px solid #eceae5;border-bottom:1px solid #eceae5;padding:56px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:30px;">El método</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;">
+          <div style="border-top:2px solid #5b4bd6;padding-top:16px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:8px;">01</div>
+            <div style="font-family:'Newsreader',serif;font-size:22px;">Escuchar</div>
+            <p style="font-size:13.5px;line-height:1.55;color:#6c6776;margin:8px 0 0;">Usuarios, soporte y pre-venta: ahí vive la fricción.</p>
+          </div>
+          <div style="border-top:2px solid #5b4bd6;padding-top:16px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:8px;">02</div>
+            <div style="font-family:'Newsreader',serif;font-size:22px;">Medir</div>
+            <p style="font-size:13.5px;line-height:1.55;color:#6c6776;margin:8px 0 0;">Embudo y cohortes: el dato señala el cuello de botella.</p>
+          </div>
+          <div style="border-top:2px solid #5b4bd6;padding-top:16px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:8px;">03</div>
+            <div style="font-family:'Newsreader',serif;font-size:22px;">Aprender</div>
+            <p style="font-size:13.5px;line-height:1.55;color:#6c6776;margin:8px 0 0;">Experimentos con hipótesis clara y criterio de éxito.</p>
+          </div>
+          <div style="border-top:2px solid #5b4bd6;padding-top:16px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:8px;">04 ↻</div>
+            <div style="font-family:'Newsreader',serif;font-size:22px;">Repetir</div>
+            <p style="font-size:13.5px;line-height:1.55;color:#6c6776;margin:8px 0 0;">Lo que funciona se queda — y se compone.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:64px 56px;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;">Ensayos</div>
+          <span style="font-size:13.5px;font-weight:600;color:#5b4bd6;">Ver todos →</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:24px;padding:26px 0;border-top:1px solid #eceaf0;">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9b95a6;flex:none;">001</span>
+          <div style="flex:1;">
+            <div style="font-family:'Newsreader',serif;font-size:26px;line-height:1.2;">El onboarding que nadie terminaba (y el dato que lo delató)</div>
+            <div style="font-size:13.5px;color:#6c6776;margin-top:6px;">Fricción → Retención · 7 min</div>
+          </div>
+          <span style="color:#5b4bd6;font-size:18px;flex:none;">→</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:24px;padding:26px 0;border-top:1px solid #eceaf0;">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9b95a6;flex:none;">002</span>
+          <div style="flex:1;">
+            <div style="font-family:'Newsreader',serif;font-size:26px;line-height:1.2;">Dónde se muere tu activación: cuatro cuellos de botella típicos</div>
+            <div style="font-size:13.5px;color:#6c6776;margin-top:6px;">Anatomía del embudo · 9 min</div>
+          </div>
+          <span style="color:#5b4bd6;font-size:18px;flex:none;">→</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:24px;padding:26px 0;border-top:1px solid #eceaf0;border-bottom:1px solid #eceaf0;">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9b95a6;flex:none;">003</span>
+          <div style="flex:1;">
+            <div style="font-family:'Newsreader',serif;font-size:26px;line-height:1.2;">Doce experimentos, una curva: lo que queda tras un trimestre</div>
+            <div style="font-size:13.5px;color:#6c6776;margin-top:6px;">Experimentos que componen · 6 min</div>
+          </div>
+          <span style="color:#5b4bd6;font-size:18px;flex:none;">→</span>
+        </div>
+      </div>
+
+      <div style="padding:0 56px 72px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:26px;">Trayectoria</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5b4bd6;margin-bottom:8px;">ACTO I · ENTREGA</div>
+            <p style="font-size:14px;line-height:1.6;color:#4a4654;margin:0;">Gestión de proyectos de software B2G y B2B. La base: equipos, alcance y compromisos cumplidos.</p>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5b4bd6;margin-bottom:8px;">ACTO II · PRODUCTO</div>
+            <p style="font-size:14px;line-height:1.6;color:#4a4654;margin:0;">Customer Success desde cero: producto, operaciones y cliente alineados para subir adopción y engagement.</p>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5b4bd6;margin-bottom:8px;">ACTO III · GROWTH</div>
+            <p style="font-size:14px;line-height:1.6;color:#4a4654;margin:0;">Growth PM: analítica, experimentación y pre-venta. Decisiones de producto que se traducen en ingresos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#17141c;padding:64px 56px;display:flex;justify-content:space-between;align-items:center;gap:48px;">
+        <div>
+          <div style="font-family:'Newsreader',serif;font-weight:300;font-size:36px;line-height:1.15;color:#fff;max-width:520px;">¿Tu SaaS creció pero el embudo se estancó? <span style="font-style:italic;color:#b9b1e4;">Hablemos.</span></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8079a0;margin-top:18px;">hola@felipepena.co · linkedin.com/in/bairon-felipe-peña-castellanos</div>
+        </div>
+        <span style="flex:none;background:#5b4bd6;color:#fff;font-weight:600;font-size:15px;padding:15px 28px;border-radius:2px;">Escríbeme →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ 05 · APLICACIONES ════════════════ -->
+  <section data-screen-label="05 Aplicaciones" style="width:1180px;display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;align-items:baseline;gap:16px;padding:0 4px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;color:#6f6a7d;">05 · APLICACIONES</span>
+      <span style="height:1px;flex:1;background:#cfccd4;"></span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:16px;color:#4a4654;">Firma de email y plantilla de carrusel</span>
+    </div>
+    <div style="background:#f6f5f3;border:1px solid #e3e0db;border-radius:4px;overflow:hidden;box-shadow:0 1px 2px rgba(20,16,30,0.04),0 30px 60px -34px rgba(20,16,30,0.22);">
+      <div style="padding:56px 72px 64px;display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:start;">
+
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:20px;">Firma de email</div>
+          <div style="background:#fff;border:1px solid #e6e3de;border-radius:6px;padding:34px 36px;">
+            <div style="font-size:14px;color:#6c6776;line-height:1.6;">Quedo pendiente de tus comentarios.<br>Un saludo,</div>
+            <div style="display:flex;gap:20px;margin-top:22px;align-items:flex-start;">
+              <span style="width:3px;align-self:stretch;background:#5b4bd6;border-radius:2px;"></span>
+              <div>
+                <div style="font-family:'Newsreader',serif;font-size:23px;color:#17141c;">{{ name }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#6c6776;margin-top:5px;">GROWTH PRODUCT MANAGER · SAAS B2B / B2G</div>
+                <div style="font-size:13.5px;margin-top:10px;color:#4a4654;"><span style="color:#5b4bd6;font-weight:600;">felipepena.co</span> · LinkedIn ↗ · Bogotá, CO</div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#6c6776;line-height:1.55;margin:14px 0 0;">Serif para el nombre, mono para el rol, un solo enlace en violeta. Sin logos de terceros ni banners promocionales.</p>
+        </div>
+
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:20px;">Portada de carrusel · 1080×1080</div>
+          <div style="width:380px;height:380px;background:#17141c;border-radius:6px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;color:#8079a0;">SERIE 01 · FRICCIÓN → RETENCIÓN</div>
+            <div style="font-family:'Newsreader',serif;font-weight:300;font-size:31px;line-height:1.18;color:#fff;max-width:280px;">El onboarding que nadie terminaba <span style="font-style:italic;color:#b9b1e4;">(y el dato que lo delató)</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="width:34px;height:34px;border:1px solid #b9b1e4;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:13px;color:#fff;">{{ initials }}</span>
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8079a0;">felipepena.co</span>
+              </div>
+              <div style="display:flex;align-items:flex-end;gap:5px;">
+                <div style="width:11px;height:9px;background:rgba(139,124,246,0.25);"></div>
+                <div style="width:11px;height:15px;background:rgba(139,124,246,0.45);"></div>
+                <div style="width:11px;height:24px;background:rgba(139,124,246,0.7);"></div>
+                <div style="width:11px;height:38px;background:#8b7cf6;"></div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#6c6776;line-height:1.55;margin:14px 0 0;">Etiqueta de serie arriba, titular serif al centro, monograma + curva abajo. Cambia solo el texto: la estructura es fija.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Felipe Peña&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;role&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Growth Product Manager&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { copied: null };
+
+  HEADLINE = "Growth Product Manager · Convierto fricción de usuario en retención e ingresos · SaaS B2B / B2G";
+
+  ABOUT = [
+    "Empecé gestionando entregas de software. Hoy me obsesiona algo más difícil de mover: por qué un producto crece.",
+    "Liderando proyectos B2G y B2B evolucioné de la entrega hacia el producto y el growth: cerca del usuario, detectando fricción y convirtiendo el feedback en mejoras que sostienen la retención y el valor a largo plazo.",
+    "Construí estrategias de Customer Success desde cero —alineando producto, operaciones y cliente para subir adopción y engagement— y trabajo con ventas en la pre-venta, así que entiendo cómo cada decisión de producto se traduce en ingresos.",
+    "Mi método es simple: entender al usuario, encontrar el cuello de botella del embudo y mejorar de forma continua con datos. Hoy, 100% como Growth Product Manager, combino producto, analítica y experimentación para escalar SaaS con impacto.",
+    "¿Tu SaaS creció pero el embudo se estancó? Hablemos."
+  ].join("\n\n");
+
+  fallbackCopy(text) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    ta.remove();
+  }
+
+  copy(key, text) {
+    const done = () => {
+      this.setState({ copied: key });
+      clearTimeout(this._t);
+      this._t = setTimeout(() => this.setState({ copied: null }), 1800);
+    };
+    try {
+      navigator.clipboard.writeText(text).then(done, () => { this.fallbackCopy(text); done(); });
+    } catch (e) {
+      this.fallbackCopy(text);
+      done();
+    }
+  }
+
+  renderVals() {
+    const name = (this.props.name ?? "Felipe Peña").trim();
+    const role = this.props.role ?? "Growth Product Manager";
+    const parts = name.split(/\s+/).filter(Boolean);
+    const initials = ((parts[0]?.[0] ?? "") + (parts.length > 1 ? parts[parts.length - 1][0] : (parts[0]?.[1] ?? ""))).toUpperCase();
+    return {
+      name, role, initials,
+      copyAbout: () => this.copy("about", this.ABOUT),
+      copyHeadline: () => this.copy("headline", this.HEADLINE),
+      copyAboutLabel: this.state.copied === "about" ? "Copiado ✓" : "Copiar texto",
+      copyHeadlineLabel: this.state.copied === "headline" ? "Copiado ✓" : "Copiar titular"
+    };
+  }
+}
+</script>
+<script>
+(function () {
+  var PAD = 40; // blank margin around each board on its printed page
+  function ready(cb) {
+    var tries = 0;
+    (function poll() {
+      var secs = document.querySelectorAll('#dc-root > div > div > section');
+      tries++;
+      if (secs.length >= 6 || tries > 100) return cb(secs);
+      setTimeout(poll, 100);
+    })();
+  }
+  addEventListener('load', function () {
+    ready(function () {
+      (async function () {
+        try { await document.fonts.ready; } catch (e) {}
+        var imgs = Array.prototype.slice.call(document.images).filter(function (i) { return !i.complete; });
+        await Promise.race([
+          Promise.allSettled(imgs.map(function (i) { return i.decode ? i.decode().catch(function(){}) : Promise.resolve(); })),
+          new Promise(function (r) { setTimeout(r, 6000); })
+        ]);
+        await new Promise(function (r) { requestAnimationFrame(function () { requestAnimationFrame(r); }); });
+
+        var secs = document.querySelectorAll('#dc-root > div > div > section');
+        var css = '';
+        secs.forEach(function (sec, i) {
+          var rect = sec.getBoundingClientRect();
+          var w = Math.ceil(rect.width) + PAD * 2;
+          var h = Math.ceil(rect.height) + PAD * 2;
+          var name = 'board' + i;
+          sec.style.page = name;
+          css += '@page ' + name + ' { size: ' + w + 'px ' + h + 'px; margin: ' + PAD + 'px; }\n';
+        });
+        var style = document.createElement('style');
+        style.textContent = css;
+        document.head.appendChild(style);
+
+        setTimeout(function () { window.print(); }, 300);
+      })();
+    });
+  });
+})();
+</script>
+</body>
+</html>
