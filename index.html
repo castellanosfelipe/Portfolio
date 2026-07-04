@@ -16,23 +16,20 @@
     html{scroll-behavior:smooth;}
     html,body{margin:0;padding:0;background:#f6f5f3;}
     ::selection{background:#5b4bd6;color:#fff;}
-    image-slot{display:block;width:100%;height:100%;}
     @keyframes slideDown{from{opacity:0;transform:translateY(-40px);}to{opacity:1;transform:translateY(0);}}
     @keyframes slideUp{from{opacity:0;transform:translateY(50px);}to{opacity:1;transform:translateY(0);}}
     @keyframes fadeItem{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
     @keyframes panelIn{from{opacity:0;transform:translateY(24px) scale(0.97);}to{opacity:1;transform:translateY(0) scale(1);}}
-    details.ficha{margin-top:8px;border-top:1px dashed #e6e3de;padding-top:12px;}
-    details.ficha summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5b4bd6;list-style:none;display:flex;align-items:center;gap:6px;}
-    details.ficha summary::-webkit-details-marker{display:none;}
-    details.ficha summary::before{content:'+';font-size:14px;line-height:1;}
-    details.ficha[open] summary::before{content:'−';}
-    details.ficha summary:hover{color:#17141c;}
-    details.ficha .ficha-h{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#9b95a6;margin:14px 0 6px;}
-    details.ficha p{font-size:13px;line-height:1.6;color:#4a4654;margin:0 0 6px;}
-    details.ficha ul{margin:0;padding-left:16px;}
-    details.ficha li{font-size:13px;line-height:1.6;color:#4a4654;margin:0 0 4px;}
-    details.ficha .tags{display:flex;flex-wrap:wrap;gap:5px;}
-    details.ficha .tags span{border:1px solid #e6e3de;border-radius:999px;padding:2px 9px;font-size:11px;color:#4a4654;}
+    .ficha-btn{margin-top:8px;border:none;border-top:1px dashed #e6e3de;background:transparent;padding:12px 0 0;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5b4bd6;display:flex;align-items:center;gap:6px;text-align:left;}
+    .ficha-btn::before{content:'+';font-size:14px;line-height:1;}
+    .ficha-btn:hover{color:#17141c;}
+    .ficha-body{flex:1;overflow-y:auto;padding:6px 26px 20px;}
+    .ficha-body .ficha-h{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:#5b4bd6;margin:18px 0 7px;}
+    .ficha-body p{font-size:14px;line-height:1.65;color:#4a4654;margin:0 0 8px;}
+    .ficha-body ul{margin:0;padding-left:18px;}
+    .ficha-body li{font-size:14px;line-height:1.65;color:#4a4654;margin:0 0 5px;}
+    .ficha-body .tags{display:flex;flex-wrap:wrap;gap:6px;}
+    .ficha-body .tags span{border:1px solid #e6e3de;border-radius:999px;padding:3px 10px;font-size:12px;color:#4a4654;}
   </style>
 </helmet>
 <div style="position:relative;min-height:100vh;background:#f6f5f3;font-family:'Hanken Grotesk',-apple-system,sans-serif;color:#17141c;">
@@ -81,7 +78,7 @@
       <div style="flex:none;position:relative;animation:slideUp 0.8s ease 0.2s both;">
         <div style="position:absolute;left:-14px;top:-14px;right:14px;bottom:14px;border:1px solid #d8d3e6;border-radius:50%;"></div>
         <div style="width:290px;height:290px;border-radius:50%;overflow:hidden;position:relative;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="avatar-landing-felipe" shape="circle" placeholder="Tu retrato / memoji" src="./avatar-felipe-memoji.png" hint-size="290px,290px" style="width:290px;height:290px;display:block;"></x-import>
+          <img src="./avatar-felipe-memoji.png" alt="Felipe Peña" style="width:290px;height:290px;display:block;object-fit:cover;">
         </div>
       </div>
     </div>
@@ -185,29 +182,7 @@
             <a href="https://agileflow-indol.vercel.app" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Demo ↗</a>
             <a href="https://github.com/castellanosfelipe/AgileFlow" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
           </div>
-          <details class="ficha">
-            <summary>Ficha completa del proyecto</summary>
-            <div class="ficha-h">El problema</div>
-            <p>Jira resuelve todo excepto lo que más necesita un equipo pequeño: empezar a trabajar rápido. Licencias caras, configuración de días y funciones que nunca se usan. Los equipos de 5 a 25 personas necesitan un backlog, un tablero y saber cómo va el sprint — no una plataforma enterprise.</p>
-            <div class="ficha-h">La solución</div>
-            <p>Una herramienta ágil self-hosted que se instala en minutos, corre en tu propia infraestructura y cubre exactamente los flujos que un equipo de desarrollo usa todos los días.</p>
-            <div class="ficha-h">Funcionalidades</div>
-            <ul>
-              <li><strong>Backlog y sprints</strong>: búsqueda en tiempo real, mover tareas entre sprints con un clic; al completar un sprint las tareas sin terminar migran automáticamente.</li>
-              <li><strong>Kanban del sprint activo</strong>: drag &amp; drop en touch, desktop y teclado; límite WIP con alertas de color; creación rápida en columna.</li>
-              <li><strong>Panel de detalle sin modal</strong>: edición con auto-guardado, registro de tiempo, comentarios, adjuntos, subtareas, bloqueos e historial de auditoría.</li>
-              <li><strong>Gantt por responsable</strong>: zoom de día a trimestre, detección de sobrecarga y conflictos, exportación CSV.</li>
-              <li><strong>PERT de dependencias</strong>: grafo automático desde el campo «Bloqueada por» — camino crítico y cuellos de botella a la vista.</li>
-              <li><strong>Tablero ejecutivo</strong>: heatmap de carga diaria por persona (Daily Resource Load Index), seguimiento de estimaciones, tareas sin estimar y cubos de envejecimiento.</li>
-              <li>Tema claro/oscuro e idioma ES/EN sin parpadeo, autenticación local o LDAP / Active Directory, rate limiting en login y backups configurables.</li>
-            </ul>
-            <div class="ficha-h">Stack</div>
-            <div class="tags"><span>Next.js 15</span><span>React 19</span><span>Tailwind</span><span>TanStack Query v5</span><span>dnd-kit</span><span>PostgreSQL</span><span>Prisma 6</span><span>NextAuth v4</span><span>Zod</span><span>TS estricto</span></div>
-            <div class="ficha-h">Cómo probarlo</div>
-            <p>Requiere Node 20+ y PostgreSQL 15+. Clonar, instalar, migrar la base con seed y correr — o entrar directo a la demo con el usuario de prueba que aparece en el README.</p>
-            <div class="ficha-h">Roadmap</div>
-            <p>Próximamente: notificaciones push, múltiples proyectos, integración GitHub/GitLab, API pública REST y vista mobile. Licencia MIT.</p>
-          </details>
+          <button class="ficha-btn" onClick="{{ openFichaAgile }}">Ficha completa del proyecto</button>
         </div>
         <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">FlowBoard</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">JavaScript</span></div>
@@ -216,25 +191,7 @@
             <a href="https://castellanosfelipe.github.io/flowboard-jira-analytics/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Demo ↗</a>
             <a href="https://github.com/castellanosfelipe/flowboard-jira-analytics" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
           </div>
-          <details class="ficha">
-            <summary>Ficha completa del proyecto</summary>
-            <div class="ficha-h">El problema</div>
-            <p>Jira guarda todos tus datos pero no te dice nada útil: sus reportes nativos muestran listas, no si el equipo está sobrecargado, cuánto se desvían las estimaciones o qué issue bloquea todo el sprint. Para eso normalmente necesitas un analista o una herramienta de €800/mes.</p>
-            <div class="ficha-h">La solución</div>
-            <p>«La capa de inteligencia que le faltaba a Jira»: un proxy local + dashboard, de solo lectura, que se conecta a tu workspace en 30 segundos y convierte los datos crudos en inteligencia accionable. El token vive solo en memoria de sesión.</p>
-            <div class="ficha-h">Funcionalidades</div>
-            <ul>
-              <li><strong>Panel ejecutivo</strong>: precisión de estimación (horas gastadas vs estimadas), carga diaria de recursos vs jornada de 8h y cubos de envejecimiento (0–7d · 7–30d · 30+d).</li>
-              <li><strong>Sprint Analytics</strong>: Gantt con subtareas anidadas, agrupación por responsable o épica, vistas de semana a trimestre y export CSV.</li>
-              <li><strong>Cycle Time &amp; Flow</strong>: grafo PERT de dependencias con score de cuello de botella por issue — detecta qué ticket se lleva el sprint si se atrasa.</li>
-              <li>Filtros globales sobre todas las vistas a la vez, interfaz ES/EN en tiempo real, tema claro/oscuro y 7 exportaciones CSV distintas.</li>
-              <li><strong>Modo demo</strong>: 25 issues ficticios para explorar todo sin credenciales — es lo que corre en la demo de GitHub Pages.</li>
-            </ul>
-            <div class="ficha-h">Arquitectura</div>
-            <p>Navegador → server.js → Jira Cloud REST API v3. El servidor usa solo la librería estándar de Node: sin framework, sin bundler, sin npm install. Requisito único: Node ≥ 18.</p>
-            <div class="ficha-h">Roadmap</div>
-            <p>Próximamente: Team Health (velocidad y burndown real), Epics &amp; Roadmap y Work Distribution. Licencia MIT.</p>
-          </details>
+          <button class="ficha-btn" onClick="{{ openFichaFlow }}">Ficha completa del proyecto</button>
         </div>
         <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">BodyCalc</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Vue · TS</span></div>
@@ -243,29 +200,7 @@
             <a href="https://castellanosfelipe.github.io/Body_Calc/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Demo ↗</a>
             <a href="https://github.com/castellanosfelipe/Body_Calc" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
           </div>
-          <details class="ficha">
-            <summary>Ficha completa del proyecto</summary>
-            <div class="ficha-h">El problema</div>
-            <p>Quien quiere mejorar su salud calcula su IMC en un sitio, sus calorías en otro y sus macros en una app de pago — y los datos no se comunican entre sí. Además, los resultados llegan sin explicación de qué significan ni qué hacer con ellos.</p>
-            <div class="ficha-h">La solución</div>
-            <p>Cuatro calculadoras conectadas por un estado compartido: IMC → Grasa Corporal → Calorías Diarias → Macros. Los datos que ingresas una vez fluyen automáticamente a las siguientes. Gratis, sin registro y sin publicidad.</p>
-            <div class="ficha-h">Fórmulas científicas</div>
-            <ul>
-              <li><strong>IMC</strong>: Quetelet con clasificación OMS.</li>
-              <li><strong>Grasa corporal</strong>: método US Navy (Hodgdon &amp; Beckett, 1984) con clasificación ACSM por sexo.</li>
-              <li><strong>Calorías</strong>: Mifflin-St Jeor (1990) + factores de actividad PAL — TDEE con desglose de TMB, déficit, mantenimiento y superávit.</li>
-              <li><strong>Macros</strong>: ratios ISSN por objetivo, en gramos y kcal de proteínas, grasas y carbohidratos.</li>
-            </ul>
-            <div class="ficha-h">Características</div>
-            <ul>
-              <li>Herencia de datos en cadena con Vuex (sexo, altura, peso, edad, TDEE).</li>
-              <li>Interfaz ES/EN persistida en localStorage.</li>
-              <li>Recursos científicos citados por calculadora: PubMed, OMS, ACSM y videos educativos.</li>
-              <li>Diseño oscuro con design tokens CSS y deploy automático a GitHub Pages con GitHub Actions.</li>
-            </ul>
-            <div class="ficha-h">Stack</div>
-            <div class="tags"><span>Vue 2.6</span><span>Vuex 3</span><span>Vue Router 3</span><span>vue-i18n</span><span>Bootstrap-Vue</span><span>TypeScript 4.1</span><span>GitHub Actions</span></div>
-          </details>
+          <button class="ficha-btn" onClick="{{ openFichaBody }}">Ficha completa del proyecto</button>
         </div>
         <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">Pomodoro Llanero</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Escritorio</span></div>
@@ -275,27 +210,7 @@
             <a href="https://github.com/castellanosfelipe/Pomodoro_llanero/releases/download/v0.3.0/Pomodoro.Llanero_0.3.0_x64-setup.exe" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Windows ↓</a>
             <a href="https://castellanosfelipe.github.io/Pomodoro_llanero/" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Web ↗</a>
           </div>
-          <details class="ficha">
-            <summary>Ficha completa del proyecto</summary>
-            <div class="ficha-h">El problema</div>
-            <p>Las apps de productividad suelen romper la concentración en vez de protegerla: notificaciones, cuentas, sincronización en la nube y descansos que terminan en un scroll infinito que roba más tiempo del que devolvió.</p>
-            <div class="ficha-h">La solución</div>
-            <p>Un temporizador preciso, privado y sereno. El descanso no te lanza a otra pantalla adictiva: te muestra un chigüiro, una corocora o una tonina de la Orinoquía, con su nombre científico y un dato curioso, y te devuelve descansado a la siguiente faena. 100% offline, cero telemetría, cero cuentas.</p>
-            <div class="ficha-h">Características (v0.3.0)</div>
-            <ul>
-              <li><strong>Temporizador de precisión</strong>: motor de reloj monotónico que sobrevive a suspender/reactivar el equipo sin acumular desfase.</li>
-              <li><strong>Fauna del Llano</strong>: 22 especies ilustradas sin repetir hasta agotar el set, galería personalizable vía JSON.</li>
-              <li><strong>Modo bloqueo del descanso</strong>: la app toma la pantalla (siempre encima, en todos los escritorios) y recupera el foco si intentas cambiar de app.</li>
-              <li><strong>Identidad llanera viva</strong>: la interfaz respira con el día — amanecer, mediodía, ocaso, noche — con vocabulario propio: faena, descanso, siesta llanera.</li>
-              <li>Estadísticas, rachas y meta diaria (SQLite); bandeja del sistema, notificaciones nativas, autostart, atajos e idioma ES/EN.</li>
-            </ul>
-            <div class="ficha-h">Arquitectura</div>
-            <p>Dominio en TypeScript puro — sin React ni Tauri — 100% testeable en Node con Vitest. La UI es React 18 + Tailwind + Zustand y el núcleo nativo es Tauri 2 (Rust), con persistencia en JSON y SQLite.</p>
-            <div class="ficha-h">Descargas</div>
-            <p>Instaladores para macOS (Apple Silicon e Intel, .dmg) y Windows 10/11 (setup.exe y MSI), más versión web local-first para probar sin instalar.</p>
-            <div class="ficha-h">Roadmap</div>
-            <p>En progreso: firma y notarización para macOS y Homebrew Cask. Próximamente: modo de imágenes generativo opt-in, más especies y soporte Linux. Licencia MIT.</p>
-          </details>
+          <button class="ficha-btn" onClick="{{ openFichaPomo }}">Ficha completa del proyecto</button>
         </div>
         <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">Scripts para Excel</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Python</span></div>
@@ -303,28 +218,7 @@
           <div style="display:flex;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:12px;">
             <a href="https://github.com/castellanosfelipe/Scritps-Manipulation-Excel" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
           </div>
-          <details class="ficha">
-            <summary>Ficha completa del proyecto</summary>
-            <div class="ficha-h">Qué es</div>
-            <p>Utilidades en Python para un flujo completo de gestión documental: digitalizar resoluciones en PDF, renombrarlas por su número, inventariar sus rutas en Excel y estructurar y limpiar ese inventario.</p>
-            <div class="ficha-h">Herramienta principal: excel_paths.py</div>
-            <p>Una CLI unificada que reemplaza varios scripts sueltos. Nunca sobrescribe el archivo de entrada y tolera celdas vacías o numéricas. Subcomandos:</p>
-            <ul>
-              <li><strong>inventory</strong> — recorre un directorio y vuelca todas las rutas a Excel.</li>
-              <li><strong>last-segment</strong> — deja solo el nombre de archivo de cada ruta.</li>
-              <li><strong>group-by-segment</strong> — agrupa filas por el N-ésimo segmento de la ruta.</li>
-              <li><strong>split-until</strong> — trocea la ruta en columnas hasta una palabra clave.</li>
-              <li><strong>move-prefix / drop-sparse-rows</strong> — mueve celdas por prefijo y elimina filas con pocos datos.</li>
-            </ul>
-            <div class="ficha-h">Además</div>
-            <ul>
-              <li>Renombrado masivo de PDFs de resoluciones con deduplicación y registro de mapeo original→renombrado.</li>
-              <li>Copia avanzada de carpetas Anexos entre directorios y sincronización de filas nuevas entre Excels conservando formato.</li>
-              <li>Empaquetable como .exe con PyInstaller para usuarios sin Python.</li>
-            </ul>
-            <div class="ficha-h">Dependencias</div>
-            <p>Solo dos externas — openpyxl y PyMuPDF — el resto es librería estándar de Python.</p>
-          </details>
+          <button class="ficha-btn" onClick="{{ openFichaExcel }}">Ficha completa del proyecto</button>
         </div>
         <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">Alto Nivel</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">CSS · JS</span></div>
@@ -333,25 +227,7 @@
             <a href="https://alto-nivel.netlify.app/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">En vivo ↗</a>
             <a href="https://github.com/castellanosfelipe/Concept-Site-AltoNivel" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
           </div>
-          <details class="ficha">
-            <summary>Ficha completa del proyecto</summary>
-            <div class="ficha-h">El problema</div>
-            <p>Quien hace senderismo y quiere dar el salto a la alta montaña no sabe en quién confiar: el mercado está lleno de «turismo de aventura» que esconde el riesgo, minimiza la preparación y no muestra el precio hasta el final.</p>
-            <div class="ficha-h">La solución</div>
-            <p>Lo contrario: rutas reales de los nevados de la Cordillera Central con su dificultad, altitud y precio a la vista desde el primer segundo. El héroe de la página es el dato más honesto — 5.364 msnm, la altitud del Nevado del Huila, contando hasta su cima.</p>
-            <div class="ficha-h">Qué encuentras</div>
-            <ul>
-              <li>Tarjetas de expedición con nivel (iniciación, técnica, alta montaña), duración y precio sin letra pequeña, filtrables por dificultad.</li>
-              <li>Guías con certificaciones ASEGUM y UIAA y testimonios que hablan de preparación y de cuándo dar la vuelta.</li>
-              <li>Línea de tiempo de 5 pasos — de la evaluación física a la cumbre — incluyendo que a veces toca bajar, y que eso también es llegar.</li>
-              <li>Formulario con validación al vuelo + enlace directo de WhatsApp; respuesta en menos de 24 horas.</li>
-              <li>Mobile-first: la mayoría llega desde Instagram o WhatsApp, así que el celular es el escenario principal.</li>
-            </ul>
-            <div class="ficha-h">Diseño como filtro</div>
-            <p>La página tiene una sola conversión: que un visitante calificado deje sus datos. El turista casual que busca «paseo fácil» se autoexcluye; el montañista serio reconoce el vocabulario y se queda. Un lead menos pero mejor vale más que diez confundidos.</p>
-            <div class="ficha-h">Stack y roadmap</div>
-            <p>HTML, CSS y JavaScript sin frameworks, desplegado en Netlify; capturas del README regenerables con Playwright. Próximamente: Netlify Forms, página por guía, versión en inglés y calendario de salidas con cupos. Licencia MIT.</p>
-          </details>
+          <button class="ficha-btn" onClick="{{ openFichaAlto }}">Ficha completa del proyecto</button>
         </div>
       </div>
     </div>
@@ -426,6 +302,240 @@
     </div>
   </footer>
 
+  <!-- ═══════ FICHAS DE PROYECTO (MODAL) ═══════ -->
+  <sc-if value="{{ fichaOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Ficha de proyecto" onClick="{{ closeFicha }}" style="position:fixed;inset:0;z-index:120;background:rgba(23,20,28,0.6);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:28px;">
+      <sc-if value="{{ fichaAgile }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">AgileFlow</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">TypeScript</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">El problema</div>
+            <p>Jira resuelve todo excepto lo que más necesita un equipo pequeño: empezar a trabajar rápido. Licencias caras, configuración de días y funciones que nunca se usan. Los equipos de 5 a 25 personas necesitan un backlog, un tablero y saber cómo va el sprint — no una plataforma enterprise.</p>
+            <div class="ficha-h">La solución</div>
+            <p>Una herramienta ágil self-hosted que se instala en minutos, corre en tu propia infraestructura y cubre exactamente los flujos que un equipo de desarrollo usa todos los días.</p>
+            <div class="ficha-h">Funcionalidades</div>
+            <ul>
+              <li><strong>Backlog y sprints</strong>: búsqueda en tiempo real, mover tareas entre sprints con un clic; al completar un sprint las tareas sin terminar migran automáticamente.</li>
+              <li><strong>Kanban del sprint activo</strong>: drag &amp; drop en touch, desktop y teclado; límite WIP con alertas de color; creación rápida en columna.</li>
+              <li><strong>Panel de detalle sin modal</strong>: edición con auto-guardado, registro de tiempo, comentarios, adjuntos, subtareas, bloqueos e historial de auditoría.</li>
+              <li><strong>Gantt por responsable</strong>: zoom de día a trimestre, detección de sobrecarga y conflictos, exportación CSV.</li>
+              <li><strong>PERT de dependencias</strong>: grafo automático desde el campo «Bloqueada por» — camino crítico y cuellos de botella a la vista.</li>
+              <li><strong>Tablero ejecutivo</strong>: heatmap de carga diaria por persona (Daily Resource Load Index), seguimiento de estimaciones, tareas sin estimar y cubos de envejecimiento.</li>
+              <li>Tema claro/oscuro e idioma ES/EN sin parpadeo, autenticación local o LDAP / Active Directory, rate limiting en login y backups configurables.</li>
+            </ul>
+            <div class="ficha-h">Stack</div>
+            <div class="tags"><span>Next.js 15</span><span>React 19</span><span>Tailwind</span><span>TanStack Query v5</span><span>dnd-kit</span><span>PostgreSQL</span><span>Prisma 6</span><span>NextAuth v4</span><span>Zod</span><span>TS estricto</span></div>
+            <div class="ficha-h">Cómo probarlo</div>
+            <p>Requiere Node 20+ y PostgreSQL 15+. Clonar, instalar, migrar la base con seed y correr — o entrar directo a la demo con el usuario de prueba que aparece en el README.</p>
+            <div class="ficha-h">Roadmap</div>
+            <p>Próximamente: notificaciones push, múltiples proyectos, integración GitHub/GitLab, API pública REST y vista mobile. Licencia MIT.</p>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://agileflow-indol.vercel.app" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Demo ↗</a>
+              <a href="https://github.com/castellanosfelipe/AgileFlow" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fichaFlow }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">FlowBoard — Jira Analytics</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">JavaScript</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">El problema</div>
+            <p>Jira guarda todos tus datos pero no te dice nada útil: sus reportes nativos muestran listas, no si el equipo está sobrecargado, cuánto se desvían las estimaciones o qué issue bloquea todo el sprint. Para eso normalmente necesitas un analista o una herramienta de €800/mes.</p>
+            <div class="ficha-h">La solución</div>
+            <p>«La capa de inteligencia que le faltaba a Jira»: un proxy local + dashboard, de solo lectura, que se conecta a tu workspace en 30 segundos y convierte los datos crudos en inteligencia accionable. El token vive solo en memoria de sesión.</p>
+            <div class="ficha-h">Funcionalidades</div>
+            <ul>
+              <li><strong>Panel ejecutivo</strong>: precisión de estimación (horas gastadas vs estimadas), carga diaria de recursos vs jornada de 8h y cubos de envejecimiento (0–7d · 7–30d · 30+d).</li>
+              <li><strong>Sprint Analytics</strong>: Gantt con subtareas anidadas, agrupación por responsable o épica, vistas de semana a trimestre y export CSV.</li>
+              <li><strong>Cycle Time &amp; Flow</strong>: grafo PERT de dependencias con score de cuello de botella por issue — detecta qué ticket se lleva el sprint si se atrasa.</li>
+              <li>Filtros globales sobre todas las vistas a la vez, interfaz ES/EN en tiempo real, tema claro/oscuro y 7 exportaciones CSV distintas.</li>
+              <li><strong>Modo demo</strong>: 25 issues ficticios para explorar todo sin credenciales — es lo que corre en la demo de GitHub Pages.</li>
+            </ul>
+            <div class="ficha-h">Arquitectura</div>
+            <p>Navegador → server.js → Jira Cloud REST API v3. El servidor usa solo la librería estándar de Node: sin framework, sin bundler, sin npm install. Requisito único: Node ≥ 18.</p>
+            <div class="ficha-h">Roadmap</div>
+            <p>Próximamente: Team Health (velocidad y burndown real), Epics &amp; Roadmap y Work Distribution. Licencia MIT.</p>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://castellanosfelipe.github.io/flowboard-jira-analytics/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Demo ↗</a>
+              <a href="https://github.com/castellanosfelipe/flowboard-jira-analytics" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fichaBody }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">BodyCalc</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Vue · TS</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">El problema</div>
+            <p>Quien quiere mejorar su salud calcula su IMC en un sitio, sus calorías en otro y sus macros en una app de pago — y los datos no se comunican entre sí. Además, los resultados llegan sin explicación de qué significan ni qué hacer con ellos.</p>
+            <div class="ficha-h">La solución</div>
+            <p>Cuatro calculadoras conectadas por un estado compartido: IMC → Grasa Corporal → Calorías Diarias → Macros. Los datos que ingresas una vez fluyen automáticamente a las siguientes. Gratis, sin registro y sin publicidad.</p>
+            <div class="ficha-h">Fórmulas científicas</div>
+            <ul>
+              <li><strong>IMC</strong>: Quetelet con clasificación OMS.</li>
+              <li><strong>Grasa corporal</strong>: método US Navy (Hodgdon &amp; Beckett, 1984) con clasificación ACSM por sexo.</li>
+              <li><strong>Calorías</strong>: Mifflin-St Jeor (1990) + factores de actividad PAL — TDEE con desglose de TMB, déficit, mantenimiento y superávit.</li>
+              <li><strong>Macros</strong>: ratios ISSN por objetivo, en gramos y kcal de proteínas, grasas y carbohidratos.</li>
+            </ul>
+            <div class="ficha-h">Características</div>
+            <ul>
+              <li>Herencia de datos en cadena con Vuex (sexo, altura, peso, edad, TDEE).</li>
+              <li>Interfaz ES/EN persistida en localStorage.</li>
+              <li>Recursos científicos citados por calculadora: PubMed, OMS, ACSM y videos educativos.</li>
+              <li>Diseño oscuro con design tokens CSS y deploy automático a GitHub Pages con GitHub Actions.</li>
+            </ul>
+            <div class="ficha-h">Stack</div>
+            <div class="tags"><span>Vue 2.6</span><span>Vuex 3</span><span>Vue Router 3</span><span>vue-i18n</span><span>Bootstrap-Vue</span><span>TypeScript 4.1</span><span>GitHub Actions</span></div>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://castellanosfelipe.github.io/Body_Calc/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Demo ↗</a>
+              <a href="https://github.com/castellanosfelipe/Body_Calc" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fichaPomo }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">Pomodoro Llanero</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Escritorio</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">El problema</div>
+            <p>Las apps de productividad suelen romper la concentración en vez de protegerla: notificaciones, cuentas, sincronización en la nube y descansos que terminan en un scroll infinito que roba más tiempo del que devolvió.</p>
+            <div class="ficha-h">La solución</div>
+            <p>Un temporizador preciso, privado y sereno. El descanso no te lanza a otra pantalla adictiva: te muestra un chigüiro, una corocora o una tonina de la Orinoquía, con su nombre científico y un dato curioso, y te devuelve descansado a la siguiente faena. 100% offline, cero telemetría, cero cuentas.</p>
+            <div class="ficha-h">Características (v0.3.0)</div>
+            <ul>
+              <li><strong>Temporizador de precisión</strong>: motor de reloj monotónico que sobrevive a suspender/reactivar el equipo sin acumular desfase.</li>
+              <li><strong>Fauna del Llano</strong>: 22 especies ilustradas sin repetir hasta agotar el set, galería personalizable vía JSON.</li>
+              <li><strong>Modo bloqueo del descanso</strong>: la app toma la pantalla (siempre encima, en todos los escritorios) y recupera el foco si intentas cambiar de app.</li>
+              <li><strong>Identidad llanera viva</strong>: la interfaz respira con el día — amanecer, mediodía, ocaso, noche — con vocabulario propio: faena, descanso, siesta llanera.</li>
+              <li>Estadísticas, rachas y meta diaria (SQLite); bandeja del sistema, notificaciones nativas, autostart, atajos e idioma ES/EN.</li>
+            </ul>
+            <div class="ficha-h">Arquitectura</div>
+            <p>Dominio en TypeScript puro — sin React ni Tauri — 100% testeable en Node con Vitest. La UI es React 18 + Tailwind + Zustand y el núcleo nativo es Tauri 2 (Rust), con persistencia en JSON y SQLite.</p>
+            <div class="ficha-h">Descargas</div>
+            <p>Instaladores para macOS (Apple Silicon e Intel, .dmg) y Windows 10/11 (setup.exe y MSI), más versión web local-first para probar sin instalar.</p>
+            <div class="ficha-h">Roadmap</div>
+            <p>En progreso: firma y notarización para macOS y Homebrew Cask. Próximamente: modo de imágenes generativo opt-in, más especies y soporte Linux. Licencia MIT.</p>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://github.com/castellanosfelipe/Pomodoro_llanero/releases/download/v0.3.0/Pomodoro.Llanero_0.3.0_aarch64.dmg" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">macOS ↓</a>
+              <a href="https://github.com/castellanosfelipe/Pomodoro_llanero/releases/download/v0.3.0/Pomodoro.Llanero_0.3.0_x64-setup.exe" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Windows ↓</a>
+              <a href="https://castellanosfelipe.github.io/Pomodoro_llanero/" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Web ↗</a>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fichaExcel }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">Scripts para Excel</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Python</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">Qué es</div>
+            <p>Utilidades en Python para un flujo completo de gestión documental: digitalizar resoluciones en PDF, renombrarlas por su número, inventariar sus rutas en Excel y estructurar y limpiar ese inventario.</p>
+            <div class="ficha-h">Herramienta principal: excel_paths.py</div>
+            <p>Una CLI unificada que reemplaza varios scripts sueltos. Nunca sobrescribe el archivo de entrada y tolera celdas vacías o numéricas. Subcomandos:</p>
+            <ul>
+              <li><strong>inventory</strong> — recorre un directorio y vuelca todas las rutas a Excel.</li>
+              <li><strong>last-segment</strong> — deja solo el nombre de archivo de cada ruta.</li>
+              <li><strong>group-by-segment</strong> — agrupa filas por el N-ésimo segmento de la ruta.</li>
+              <li><strong>split-until</strong> — trocea la ruta en columnas hasta una palabra clave.</li>
+              <li><strong>move-prefix / drop-sparse-rows</strong> — mueve celdas por prefijo y elimina filas con pocos datos.</li>
+            </ul>
+            <div class="ficha-h">Además</div>
+            <ul>
+              <li>Renombrado masivo de PDFs de resoluciones con deduplicación y registro de mapeo original→renombrado.</li>
+              <li>Copia avanzada de carpetas Anexos entre directorios y sincronización de filas nuevas entre Excels conservando formato.</li>
+              <li>Empaquetable como .exe con PyInstaller para usuarios sin Python.</li>
+            </ul>
+            <div class="ficha-h">Dependencias</div>
+            <p>Solo dos externas — openpyxl y PyMuPDF — el resto es librería estándar de Python.</p>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://github.com/castellanosfelipe/Scritps-Manipulation-Excel" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fichaAlto }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">Alto Nivel</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">CSS · JS</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">El problema</div>
+            <p>Quien hace senderismo y quiere dar el salto a la alta montaña no sabe en quién confiar: el mercado está lleno de «turismo de aventura» que esconde el riesgo, minimiza la preparación y no muestra el precio hasta el final.</p>
+            <div class="ficha-h">La solución</div>
+            <p>Lo contrario: rutas reales de los nevados de la Cordillera Central con su dificultad, altitud y precio a la vista desde el primer segundo. El héroe de la página es el dato más honesto — 5.364 msnm, la altitud del Nevado del Huila, contando hasta su cima.</p>
+            <div class="ficha-h">Qué encuentras</div>
+            <ul>
+              <li>Tarjetas de expedición con nivel (iniciación, técnica, alta montaña), duración y precio sin letra pequeña, filtrables por dificultad.</li>
+              <li>Guías con certificaciones ASEGUM y UIAA y testimonios que hablan de preparación y de cuándo dar la vuelta.</li>
+              <li>Línea de tiempo de 5 pasos — de la evaluación física a la cumbre — incluyendo que a veces toca bajar, y que eso también es llegar.</li>
+              <li>Formulario con validación al vuelo + enlace directo de WhatsApp; respuesta en menos de 24 horas.</li>
+              <li>Mobile-first: la mayoría llega desde Instagram o WhatsApp, así que el celular es el escenario principal.</li>
+            </ul>
+            <div class="ficha-h">Diseño como filtro</div>
+            <p>La página tiene una sola conversión: que un visitante calificado deje sus datos. El turista casual que busca «paseo fácil» se autoexcluye; el montañista serio reconoce el vocabulario y se queda. Un lead menos pero mejor vale más que diez confundidos.</p>
+            <div class="ficha-h">Stack y roadmap</div>
+            <p>HTML, CSS y JavaScript sin frameworks, desplegado en Netlify; capturas del README regenerables con Playwright. Próximamente: Netlify Forms, página por guía, versión en inglés y calendario de salidas con cupos. Licencia MIT.</p>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://alto-nivel.netlify.app/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">En vivo ↗</a>
+              <a href="https://github.com/castellanosfelipe/Concept-Site-AltoNivel" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </sc-if>
+
   <!-- ═══════ CHAT FLOTANTE ═══════ -->
   <sc-if value="{{ showChatBtn }}" hint-placeholder-val="{{ false }}">
     <button onClick="{{ openChat }}" title="Pregúntame lo que quieras" style="position:fixed;right:26px;bottom:26px;z-index:100;width:60px;height:60px;border-radius:50%;background:#5b4bd6;border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px -10px rgba(91,75,214,0.55);" style-hover="background:#17141c;transform:scale(1.06);" style-active="transform:scale(0.95);">
@@ -438,7 +548,7 @@
 
       <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid #eceae5;background:#f6f5f3;">
         <div style="width:38px;height:38px;border-radius:50%;overflow:hidden;flex:none;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="avatar-chat-felipe" shape="circle" placeholder="🙂" src="./avatar-felipe-memoji.png" hint-size="38px,38px" style="width:38px;height:38px;display:block;"></x-import>
+          <img src="./avatar-felipe-memoji.png" alt="Felipe Peña" style="width:38px;height:38px;display:block;object-fit:cover;">
         </div>
         <div style="flex:1;">
           <div style="font-weight:600;font-size:14.5px;">{{ name }}</div>
@@ -590,7 +700,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Felipe Peña&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;ing.felipe55@outlook.com&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;chatEnabled&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Funcional&quot;}}">
 class Component extends DCLogic {
-  state = { chatOpen: false, messages: [], input: "" };
+  state = { chatOpen: false, messages: [], input: "", ficha: null };
 
   ANSWERS = {
     me: "Empecé gestionando entregas de software. Hoy me obsesiona algo más difícil de mover: por qué un producto crece.\n\nMi historia en tres actos:",
@@ -639,7 +749,11 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
-    this._esc = (e) => { if (e.key === "Escape" && this.state.chatOpen) this.setState({ chatOpen: false }); };
+    this._esc = (e) => {
+      if (e.key !== "Escape") return;
+      if (this.state.ficha) this.setState({ ficha: null });
+      else if (this.state.chatOpen) this.setState({ chatOpen: false });
+    };
     window.addEventListener("keydown", this._esc);
   }
 
@@ -690,6 +804,21 @@ class Component extends DCLogic {
         if (!q) return;
         this.ask(this.route(q), q);
       },
+      fichaOpen: this.state.ficha !== null,
+      fichaAgile: this.state.ficha === "agile",
+      fichaFlow: this.state.ficha === "flow",
+      fichaBody: this.state.ficha === "body",
+      fichaPomo: this.state.ficha === "pomo",
+      fichaExcel: this.state.ficha === "excel",
+      fichaAlto: this.state.ficha === "alto",
+      openFichaAgile: () => this.setState({ ficha: "agile" }),
+      openFichaFlow: () => this.setState({ ficha: "flow" }),
+      openFichaBody: () => this.setState({ ficha: "body" }),
+      openFichaPomo: () => this.setState({ ficha: "pomo" }),
+      openFichaExcel: () => this.setState({ ficha: "excel" }),
+      openFichaAlto: () => this.setState({ ficha: "alto" }),
+      closeFicha: () => this.setState({ ficha: null }),
+      stopProp: (e) => e.stopPropagation(),
       askMe: () => this.ask("me", "¿Quién eres? Cuéntame más sobre ti."),
       askProjects: () => this.ask("projects", "¿Cuáles son tus proyectos?"),
       askSkills: () => this.ask("skills", "¿Cuáles son tus skills?"),
