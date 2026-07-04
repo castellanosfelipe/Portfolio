@@ -20,6 +20,7 @@
 - [Demo en vivo](#-demo-en-vivo)
 - [Características principales](#-características-principales)
 - [Capturas de pantalla](#-capturas-de-pantalla)
+- [Métricas de éxito](#-métricas-de-éxito)
 - [Instalación rápida](#-instalación-rápida)
 - [Cómo usar](#-cómo-usar)
 - [Arquitectura](#-arquitectura)
@@ -30,23 +31,23 @@
 
 ## 🎯 ¿Qué es este portafolio?
 
-Es el sitio de marca personal de **Felipe Peña**, Growth Product Manager en Bogotá, Colombia. En una sola página presenta quién es, cómo trabaja, qué ha construido y qué escribe — y lo hace practicando lo que predica: cada proyecto se presenta como un caso de producto (problema, solución, resultado), no como una lista de tecnologías.
+Es el sitio de marca personal de **Felipe Peña**, Growth Product Manager en Bogotá, Colombia. Y está construido como pienso los productos: el visitante es un usuario con un job-to-be-done — evaluar en pocos minutos si vale la pena hablar conmigo — y cada sección existe para mover esa decisión, no para decorar.
 
 ### El problema que resuelve
 
-Un CV estático dice qué cargos tuviste, pero no muestra **cómo piensas**. Quien evalúa a un Product Manager necesita ver su método, sus decisiones y sus productos funcionando — y normalmente eso está disperso entre LinkedIn, GitHub y documentos sueltos.
+Un CV estático dice qué cargos tuviste, pero no muestra **cómo piensas**. Quien evalúa a un Product Manager necesita ver su método, sus decisiones y sus productos funcionando — y normalmente eso está disperso entre LinkedIn, GitHub y documentos sueltos. Cada salto entre plataformas es fricción, y la fricción mata conversión.
 
 ### La solución
 
-Un portafolio navegable que concentra todo en un solo lugar: el método de trabajo paso a paso, seis proyectos con ficha completa y demo en vivo, cuatro ensayos de producto, y un chat integrado que responde las preguntas típicas de un reclutador en segundos.
+Un funnel de una sola página con una sola conversión: **que el visitante correcto escriba**. El recorrido reduce fricción en cada paso — método de trabajo con entregables concretos, seis proyectos con ficha de caso de producto y demo funcionando, cuatro ensayos que muestran criterio, y un chat integrado que responde las preguntas típicas de un reclutador sin esperar respuesta de nadie.
 
 ### ¿Para quién es?
 
-| Audiencia | Beneficio clave |
-|-----------|----------------|
-| Recruiters y hiring managers | Evalúan en minutos la trayectoria, el método y proyectos reales con demos funcionando |
-| Comunidad de producto | Ensayos sobre experimentación, Product-Market Fit e IA aplicada al día a día de un PM |
-| Clientes y colaboradores potenciales | Entienden cómo trabaja Felipe antes del primer contacto, y le escriben con un clic |
+| Audiencia | Job-to-be-done que resuelve |
+|-----------|----------------------------|
+| Recruiters y hiring managers | Evaluar trayectoria, método y evidencia real de producto en minutos, sin agendar una llamada |
+| Comunidad de producto | Leer ensayos sobre experimentación, Product-Market Fit e IA aplicada al día a día de un PM |
+| Clientes y colaboradores potenciales | Entender cómo trabajo antes del primer contacto — y escribirme con un clic |
 
 ---
 
@@ -56,32 +57,77 @@ El sitio está publicado y funcionando en GitHub Pages:
 
 [![Ver el sitio en vivo](https://img.shields.io/badge/▶_Ver_el_sitio-castellanosfelipe.github.io/Portfolio-5b4bd6?style=for-the-badge)](https://castellanosfelipe.github.io/Portfolio/)
 
-<!-- TODO: agregar demo.gif del flujo principal (abrir el sitio → clic en "Ficha completa del proyecto" → abrir el chat y usar un chip). Guardarlo en docs/media/demo.gif y referenciarlo aquí. -->
+<div align="center">
+  <img src="docs/media/demo-ficha-proyecto.gif" alt="Recorrido desde la portada hasta abrir la ficha completa de un proyecto en modal" width="800"/>
+  <p><em>Flujo principal: del hero a la ficha de caso de producto — problema, solución, funcionalidades y stack sin salir de la página.</em></p>
+</div>
+
+<div align="center">
+  <img src="docs/media/demo-chat.gif" alt="El chat integrado respondiendo sobre trayectoria, método y proyectos" width="800"/>
+  <p><em>El chat responde por mí: trayectoria, método y proyectos en segundos — cero fricción para el visitante que evalúa rápido.</em></p>
+</div>
 
 ---
 
 ## ✨ Características principales
 
-| Feature | Descripción |
-|---------|-------------|
-| 🧭 **Narrativa de marca personal** | Hero con tagline, sección "Sobre mí" con foto, trayectoria en tres actos y método de trabajo en cuatro pasos con entregables concretos |
-| 💬 **Chat asistente integrado** | Un chat flotante responde por Felipe: trayectoria, proyectos, skills, método y contacto. Enruta preguntas libres por palabras clave y funciona sin backend |
-| 🗂️ **Fichas de proyecto en modal** | Seis proyectos con ficha completa (problema, solución, funcionalidades, stack y roadmap) tomada de los README reales de cada repositorio |
-| ✍️ **Ensayos de producto** | Cuatro ensayos sobre experimentación, PMF e IA, con páginas propias enlazadas desde la portada |
-| 🎨 **Diseño editorial** | Tipografía serif/mono, animaciones de entrada, cursor fluido interactivo y paleta consistente en todo el sitio |
-| 🚀 **Publicación automática** | Cada push a `main` despliega el sitio en GitHub Pages, sin build step ni dependencias |
+| Feature | Qué mueve en el funnel |
+|---------|------------------------|
+| 🧭 **Narrativa de marca personal** | Hero con posicionamiento claro, "Sobre mí" con foto, trayectoria en tres actos con logros concretos y método en cuatro pasos con entregables — el visitante entiende el valor en el primer scroll |
+| 💬 **Chat asistente integrado** | Responde trayectoria, proyectos, skills, método y contacto con chips guiados y enrutado de preguntas libres. Convierte curiosidad en información sin backend ni esperas |
+| 🗂️ **Fichas de proyecto en modal** | Seis proyectos presentados como casos de producto (problema → solución → funcionalidades → stack → roadmap), tomados de los README reales de cada repositorio. Evidencia, no adjetivos |
+| ✍️ **Ensayos de producto** | Cuatro ensayos sobre experimentación, PMF e IA con páginas propias — retención para el lector que quiere profundidad |
+| 🎨 **Diseño editorial** | Tipografía serif/mono, animaciones de entrada y cursor fluido: la primera impresión también comunica estándar de calidad |
+| 🚀 **Publicación automática** | Cada push a `main` despliega en GitHub Pages sin build step — tiempo de fricción detectada a mejora publicada: minutos |
 
 ---
 
 ## 📸 Capturas de pantalla
 
-<!-- TODO: agregar capturas reales del sitio en docs/screenshots/ y referenciarlas aquí. Tomas sugeridas, en este orden: -->
-<!-- 1. hero.png — portada con el tagline "El crecimiento no se hackea. Se compone." y el memoji -->
-<!-- 2. ficha-modal.png — modal de ficha completa de un proyecto (ej. AgileFlow) abierto -->
-<!-- 3. chat.png — chat flotante abierto mostrando la respuesta de "Método" -->
-<!-- 4. sobre-mi.png — sección Sobre mí con la foto y los tres principios -->
+### Portada — el posicionamiento en 5 segundos
+<div align="center">
+  <img src="docs/screenshots/hero.png" alt="Portada del sitio con el titular 'El crecimiento no se hackea. Se compone.' y el memoji de Felipe" width="800"/>
+  <p><em>El primer pantallazo responde quién soy, qué hago y qué creo — y ofrece dos rutas: conocerme o preguntarle al chat.</em></p>
+</div>
 
-> 🖼️ **Capturas en camino.** Mientras tanto, el sitio completo puede verse en vivo en [castellanosfelipe.github.io/Portfolio](https://castellanosfelipe.github.io/Portfolio/).
+### Ficha de proyecto — evidencia en formato caso de producto
+<div align="center">
+  <img src="docs/screenshots/ficha-modal.png" alt="Modal con la ficha completa del proyecto AgileFlow: problema, solución, funcionalidades y stack" width="800"/>
+  <p><em>Cada proyecto se defiende solo: problema, solución, funcionalidades y stack, con demo y código a un clic.</em></p>
+</div>
+
+### Chat — la conversación que un CV no puede tener
+<div align="center">
+  <img src="docs/screenshots/chat.png" alt="Chat flotante abierto respondiendo el método de trabajo en cuatro pasos" width="800"/>
+  <p><em>El visitante pregunta, el sitio responde: aquí explicando el método de trabajo en cuatro pasos con entregables.</em></p>
+</div>
+
+### Método — cómo trabajo, con entregables y no promesas
+<div align="center">
+  <img src="docs/screenshots/metodo.png" alt="Sección del método: Escuchar, Medir, Experimentar y Componer, cada paso con su entregable" width="800"/>
+  <p><em>Escuchar → Medir → Experimentar → Componer: cada paso termina en un entregable concreto, como debe ser.</em></p>
+</div>
+
+### Sobre mí — la persona detrás del funnel
+<div align="center">
+  <img src="docs/screenshots/sobre-mi.png" alt="Sección Sobre mí con la fotografía de Felipe y sus tres principios de trabajo" width="800"/>
+  <p><em>Foto real, historia real y tres principios: datos antes que opiniones, experimentos que se acumulan, crecimiento que se compone.</em></p>
+</div>
+
+---
+
+## 📈 Métricas de éxito
+
+Este sitio tiene una sola conversión y la mido como cualquier producto:
+
+| Señal | Qué valida |
+|-------|-----------|
+| **Mensajes recibidos** (mail / LinkedIn) | La conversión final: el visitante correcto decidió escribir |
+| **Clics a demos y repositorios** | La evidencia interesa — los proyectos hacen su trabajo |
+| **Interacciones con el chat** | El formato responde dudas reales antes del primer contacto |
+| **Lecturas de ensayos** | El contenido retiene a la audiencia de producto |
+
+> La instrumentación de analítica está en el roadmap; hoy la fuente de verdad son los mensajes que llegan.
 
 ---
 
@@ -140,6 +186,20 @@ cp ensayos/pmf-sostener-y-expandir.html ensayos/mi-nuevo-ensayo.html
 2. Duplicar su panel en `<!-- FICHAS DE PROYECTO (MODAL) -->`.
 3. Registrar el par botón/panel en `renderVals()` (`openFichaX` y `fichaX`).
 
+### Regenerar las capturas de este README
+
+```bash
+# Requisitos (solo la primera vez)
+pip3 install --user playwright pillow
+python3 -m playwright install chromium
+
+# Servir el sitio y capturar
+python3 -m http.server 8899 &
+python3 scripts/capture.py
+```
+
+Genera los screenshots en `docs/screenshots/` y los GIFs en `docs/media/`.
+
 ### Publicar cambios
 
 ```bash
@@ -159,6 +219,7 @@ Sitio 100% estático, sin build step, sin bundler y sin dependencias de npm.
 | Componentes | `support.js` — plantillas declarativas con estado | Chat flotante, modales de ficha y reactividad de la UI |
 | Efectos | `fluid-cursor.js` | Simulación de fluido que sigue al cursor en la portada |
 | Contenido | `ensayos/*.html` | Páginas independientes por ensayo, con enlace de vuelta a la portada |
+| Documentación | `scripts/capture.py` — Playwright + Pillow | Screenshots y GIFs de este README, regenerables con un comando |
 | Hosting | GitHub Pages + `.nojekyll` | Deploy automático en cada push a `main`, sirviendo los archivos tal cual |
 
 ---
@@ -166,14 +227,15 @@ Sitio 100% estático, sin build step, sin bundler y sin dependencias de npm.
 ## 🚧 Roadmap
 
 ### ✅ Completado
-- [x] Portada de marca personal: hero, sobre mí con foto, método en 4 pasos y trayectoria
-- [x] Seis proyectos con ficha completa en modal, basada en los README reales de cada repo
+- [x] Portada de marca personal: hero, sobre mí con foto, método en 4 pasos y trayectoria con logros
+- [x] Seis proyectos con ficha de caso de producto en modal, basada en los README reales de cada repo
 - [x] Chat asistente con chips guiados y enrutamiento de preguntas libres
 - [x] Cuatro ensayos con páginas propias y URLs limpias
 - [x] Despliegue automático en GitHub Pages
+- [x] Capturas y GIFs de demo generados con Playwright, regenerables con `scripts/capture.py`
 
 ### 🔮 Próximamente
-- [ ] Capturas de pantalla y GIF de demo para este README
+- [ ] Instrumentar analítica de producto (la sección de métricas pide datos, no intuiciones)
 - [ ] Metadatos SEO y Open Graph (título, descripción e imagen al compartir el enlace)
 - [ ] Favicon propio
 - [ ] Versión en inglés del sitio
