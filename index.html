@@ -233,6 +233,24 @@
           </div>
           <button class="ficha-btn" onClick="{{ openFichaAlto }}">Ficha completa del proyecto</button>
         </div>
+        <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
+          <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">StabilityMonitor</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Python</span></div>
+          <p style="margin:0;font-size:13.5px;line-height:1.58;color:#6c6776;flex:1;">Monitor offline para Windows: disponibilidad de FTP/SFTP/WebDAV y bases de datos, con alertas, historial y reportes.</p>
+          <div style="display:flex;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:12px;flex-wrap:wrap;">
+            <a href="https://github.com/castellanosfelipe/StabilityMonitor/releases/download/v2.0.0/StabilityMonitor-v2.0.0-win64.zip" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Windows ↓</a>
+            <a href="https://github.com/castellanosfelipe/StabilityMonitor" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+          <button class="ficha-btn" onClick="{{ openFichaStab }}">Ficha completa del proyecto</button>
+        </div>
+        <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
+          <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">Portfolio</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">HTML · JS</span></div>
+          <p style="margin:0;font-size:13.5px;line-height:1.58;color:#6c6776;flex:1;">Este mismo sitio: un funnel de una página con chat integrado, fichas de proyecto y ensayos. Sin build step.</p>
+          <div style="display:flex;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:12px;">
+            <a href="https://castellanosfelipe.github.io/Portfolio/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">En vivo ↗</a>
+            <a href="https://github.com/castellanosfelipe/Portfolio" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+          <button class="ficha-btn" onClick="{{ openFichaPortfolio }}">Ficha completa del proyecto</button>
+        </div>
       </div>
     </div>
   </section>
@@ -537,6 +555,79 @@
           </div>
         </div>
       </sc-if>
+
+      <sc-if value="{{ fichaStab }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">StabilityMonitor</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">Python</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">El problema</div>
+            <p>Muchas integraciones dependen de rutas FTP, SFTP, WebDAV o bases de datos que fallan en silencio. Cuando el error se descubre horas después, el equipo ya perdió tiempo, trazabilidad y capacidad de explicar qué ocurrió.</p>
+            <div class="ficha-h">La solución</div>
+            <p>Un monitor que centraliza esas conexiones en un panel local, las prueba de forma periódica, clasifica la causa de los fallos, conserva historial e incidentes y genera reportes de estabilidad listos para compartir. Diseñado para operar 24/7 en Windows, incluso sin internet, con un ejecutable portable.</p>
+            <div class="ficha-h">Funcionalidades</div>
+            <ul>
+              <li><strong>Multiprotocolo</strong>: FTP, FTPS, SFTP, WebDAV(S) y bases PostgreSQL, MySQL, MariaDB, SQL Server y Oracle desde una sola interfaz.</li>
+              <li><strong>Monitoreo de bajo impacto</strong>: una sesión por host, espaciado, jitter y backoff — el monitor nunca se convierte en carga durante una caída.</li>
+              <li><strong>Objetivos verificables</strong>: comprueba rutas, carpetas o tablas concretas para distinguir «el servidor responde» de «el recurso esperado existe».</li>
+              <li><strong>Incidentes con causa</strong>: clasifica fallos como DNS, timeout, autenticación, TLS o ruta inexistente, con apertura y cierre registrados.</li>
+              <li><strong>Reportes HTML y PDF por cliente</strong>: uptime, downtime, MTTR, incidentes y metodología de cálculo incluida.</li>
+              <li>Exportación/importación JSON, alias virtuales, alertas por toast, bandeja, SMTP o webhook, y modo demo con datos ficticios.</li>
+            </ul>
+            <div class="ficha-h">Stack</div>
+            <div class="tags"><span>FastAPI</span><span>Uvicorn</span><span>APScheduler</span><span>Paramiko</span><span>HTTPX</span><span>SQLite WAL</span><span>DPAPI</span><span>Chart.js local</span><span>PyInstaller</span></div>
+            <div class="ficha-h">Cómo probarlo</div>
+            <p>ZIP portable para Windows 10 Pro x64: no requiere internet ni Python en la máquina destino — descomprimir y ejecutar el instalador PowerShell. Para explorar sin servidores reales, el modo demo siembra conexiones ficticias, historial e incidentes de ejemplo. 147 tests pasando. Licencia MIT.</p>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://github.com/castellanosfelipe/StabilityMonitor/releases/download/v2.0.0/StabilityMonitor-v2.0.0-win64.zip" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">Windows ↓</a>
+              <a href="https://github.com/castellanosfelipe/StabilityMonitor" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ fichaPortfolio }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
+            <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+              <span style="font-family:'Newsreader',serif;font-size:24px;">Portfolio</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">HTML · JS</span>
+            </div>
+            <button onClick="{{ closeFicha }}" aria-label="Cerrar ficha" style="display:flex;align-items:center;justify-content:center;border:1px solid #e0dce8;background:#fff;border-radius:999px;width:32px;height:32px;cursor:pointer;color:#4a4654;flex:none;" style-hover="background:#17141c;color:#fff;border-color:#17141c;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+          <div class="ficha-body">
+            <div class="ficha-h">El problema</div>
+            <p>Un CV estático dice qué cargos tuviste, pero no muestra cómo piensas. Quien evalúa a un Product Manager necesita ver su método, sus decisiones y sus productos funcionando — y eso suele estar disperso entre LinkedIn, GitHub y documentos sueltos. Cada salto entre plataformas es fricción, y la fricción mata conversión.</p>
+            <div class="ficha-h">La solución</div>
+            <p>Esta misma página: un funnel de una sola página con una sola conversión — que el visitante correcto escriba. Método de trabajo con entregables concretos, proyectos con ficha de caso de producto, ensayos que muestran criterio y un chat que responde las preguntas típicas de un reclutador sin esperar respuesta de nadie.</p>
+            <div class="ficha-h">Características</div>
+            <ul>
+              <li><strong>Chat asistente integrado</strong>: trayectoria, proyectos, skills, método y contacto con chips guiados y enrutado de preguntas libres — sin backend.</li>
+              <li><strong>Fichas de proyecto en modal</strong>: cada proyecto presentado como caso de producto (problema → solución → funcionalidades → stack → roadmap), tomado del README real de su repositorio.</li>
+              <li><strong>Ensayos de producto</strong> con páginas propias sobre experimentación, Product-Market Fit e IA aplicada al día a día de un PM.</li>
+              <li><strong>Diseño editorial</strong>: tipografía serif/mono, animaciones de entrada y cursor fluido.</li>
+              <li><strong>Publicación automática</strong>: cada push a main despliega en GitHub Pages sin build step — de fricción detectada a mejora publicada en minutos.</li>
+            </ul>
+            <div class="ficha-h">Stack</div>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span><span>Playwright (capturas)</span></div>
+            <div class="ficha-h">La demo</div>
+            <p>Estás dentro de ella. Esta ficha, el chat flotante y todo lo que has recorrido son el producto funcionando.</p>
+          </div>
+          <div style="display:flex;gap:18px;padding:14px 24px;border-top:1px solid #eceae5;background:#f6f5f3;font-family:'IBM Plex Mono',monospace;font-size:12.5px;flex-wrap:wrap;flex:none;">
+              <a href="https://castellanosfelipe.github.io/Portfolio/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;font-weight:500;" style-hover="color:#17141c;">En vivo ↗</a>
+              <a href="https://github.com/castellanosfelipe/Portfolio" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;" style-hover="color:#17141c;">Código ↗</a>
+          </div>
+        </div>
+      </sc-if>
     </div>
   </sc-if>
 
@@ -611,6 +702,16 @@
                       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;"><span style="font-weight:600;font-size:14px;">Alto Nivel</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;">CSS · JS</span></div>
                       <p style="margin:5px 0 0;font-size:12px;line-height:1.5;color:#6c6776;">Sitio conceptual de expediciones a los nevados de la Cordillera Central: dificultad, altitud y precio a la vista desde el primer segundo, diseñado para filtrar al visitante correcto. Sin frameworks.</p>
                       <div style="display:flex;gap:12px;font-size:12.5px;font-weight:500;margin-top:6px;"><a href="https://alto-nivel.netlify.app/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;">En vivo ↗</a><a href="https://github.com/castellanosfelipe/Concept-Site-AltoNivel" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;">Código ↗</a></div>
+                    </div>
+                    <div style="border:1px solid #e6e3de;border-radius:12px;padding:13px 15px;background:#fff;">
+                      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;"><span style="font-weight:600;font-size:14px;">StabilityMonitor</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;">Python</span></div>
+                      <p style="margin:5px 0 0;font-size:12px;line-height:1.5;color:#6c6776;">Monitor offline 24/7 para Windows que centraliza FTP/SFTP/WebDAV y bases de datos: clasifica la causa de cada fallo, guarda historial e incidentes y genera reportes de estabilidad HTML/PDF. FastAPI + SQLite, portable y sin internet.</p>
+                      <div style="display:flex;gap:12px;font-size:12.5px;font-weight:500;margin-top:6px;flex-wrap:wrap;"><a href="https://github.com/castellanosfelipe/StabilityMonitor/releases/download/v2.0.0/StabilityMonitor-v2.0.0-win64.zip" style="color:#5b4bd6;text-decoration:none;">Windows ↓</a><a href="https://github.com/castellanosfelipe/StabilityMonitor" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;">Código ↗</a></div>
+                    </div>
+                    <div style="border:1px solid #e6e3de;border-radius:12px;padding:13px 15px;background:#fff;">
+                      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;"><span style="font-weight:600;font-size:14px;">Portfolio</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;">HTML · JS</span></div>
+                      <p style="margin:5px 0 0;font-size:12px;line-height:1.5;color:#6c6776;">Este mismo sitio: un funnel de una página con chat integrado, fichas de caso de producto y ensayos, desplegado en GitHub Pages sin build step. La demo la estás usando ahora mismo.</p>
+                      <div style="display:flex;gap:12px;font-size:12.5px;font-weight:500;margin-top:6px;"><a href="https://castellanosfelipe.github.io/Portfolio/" target="_blank" rel="noopener" style="color:#5b4bd6;text-decoration:none;">En vivo ↗</a><a href="https://github.com/castellanosfelipe/Portfolio" target="_blank" rel="noopener" style="color:#9b95a6;text-decoration:none;">Código ↗</a></div>
                     </div>
                   </div>
                 </sc-if>
@@ -710,7 +811,7 @@ class Component extends DCLogic {
 
   ANSWERS = {
     me: "Empecé gestionando entregas de software. Hoy me obsesiona algo más difícil de mover: por qué un producto crece.\n\nActualmente soy responsable de la evolución del portafolio de producto IFindIT (Search, Chat, Data Catalog y Dashboards). Mi historia en tres actos:",
-    projects: "Aquí pruebo ideas de punta a punta — del problema al deploy. Seis proyectos, todo el código en GitHub. En la sección de proyectos cada tarjeta tiene su ficha completa con el detalle del README:",
+    projects: "Aquí pruebo ideas de punta a punta — del problema al deploy. Ocho proyectos, todo el código en GitHub. En la sección de proyectos cada tarjeta tiene su ficha completa con el detalle del README:",
     skills: "Mi caja de herramientas combina producto, datos y ejecución:",
     fun: "Fuera del embudo: construí Pomodoro Llanero, un temporizador local-first que premia cada descanso con una de 22 especies del Llano colombiano 🦜 — y Alto Nivel, un sitio conceptual de expediciones a los nevados de la Cordillera Central.\n\nMi filosofía aplica igual fuera del trabajo: pequeños experimentos que se acumulan.",
     metodo: "Trabajo con un ciclo de cuatro pasos, repetido con disciplina:\n\n01 · Escuchar — la fricción real vive en las entrevistas con usuarios, los tickets de soporte y la pre-venta. De ahí sale un mapa de fricciones priorizado.\n\n02 · Medir — instrumentar el embudo y las cohortes antes de opinar: un baseline claro y el cuello de botella señalado con datos.\n\n03 · Experimentar — hipótesis falsables con criterio de éxito definido antes de escribir código. La salida es una decisión honesta: escalar, iterar o descartar.\n\n04 · Componer — lo que gana se integra al producto y al playbook; lo que pierde deja un aprendizaje documentado.\n\nEl crecimiento no se hackea: se compone.",
@@ -817,12 +918,16 @@ class Component extends DCLogic {
       fichaPomo: this.state.ficha === "pomo",
       fichaExcel: this.state.ficha === "excel",
       fichaAlto: this.state.ficha === "alto",
+      fichaStab: this.state.ficha === "stab",
+      fichaPortfolio: this.state.ficha === "portfolio",
       openFichaAgile: () => this.setState({ ficha: "agile" }),
       openFichaFlow: () => this.setState({ ficha: "flow" }),
       openFichaBody: () => this.setState({ ficha: "body" }),
       openFichaPomo: () => this.setState({ ficha: "pomo" }),
       openFichaExcel: () => this.setState({ ficha: "excel" }),
       openFichaAlto: () => this.setState({ ficha: "alto" }),
+      openFichaStab: () => this.setState({ ficha: "stab" }),
+      openFichaPortfolio: () => this.setState({ ficha: "portfolio" }),
       closeFicha: () => this.setState({ ficha: null }),
       stopProp: (e) => e.stopPropagation(),
       askMe: () => this.ask("me", "¿Quién eres? Cuéntame más sobre ti."),

@@ -39,7 +39,7 @@ Un CV estático dice qué cargos tuviste, pero no muestra **cómo piensas**. Qui
 
 ### La solución
 
-Un funnel de una sola página con una sola conversión: **que el visitante correcto escriba**. El recorrido reduce fricción en cada paso — método de trabajo con entregables concretos, seis proyectos con ficha de caso de producto y demo funcionando, cuatro ensayos que muestran criterio, y un chat integrado que responde las preguntas típicas de un reclutador sin esperar respuesta de nadie.
+Un funnel de una sola página con una sola conversión: **que el visitante correcto escriba**. El recorrido reduce fricción en cada paso — método de trabajo con entregables concretos, ocho proyectos con ficha de caso de producto y demo funcionando, cuatro ensayos que muestran criterio, y un chat integrado que responde las preguntas típicas de un reclutador sin esperar respuesta de nadie.
 
 ### ¿Para quién es?
 
@@ -75,7 +75,7 @@ El sitio está publicado y funcionando en GitHub Pages:
 |---------|------------------------|
 | 🧭 **Narrativa de marca personal** | Hero con posicionamiento claro, "Sobre mí" con foto, trayectoria en tres actos con logros concretos y método en cuatro pasos con entregables — el visitante entiende el valor en el primer scroll |
 | 💬 **Chat asistente integrado** | Responde trayectoria, proyectos, skills, método y contacto con chips guiados y enrutado de preguntas libres. Convierte curiosidad en información sin backend ni esperas |
-| 🗂️ **Fichas de proyecto en modal** | Seis proyectos presentados como casos de producto (problema → solución → funcionalidades → stack → roadmap), tomados de los README reales de cada repositorio. Evidencia, no adjetivos |
+| 🗂️ **Fichas de proyecto en modal** | Ocho proyectos presentados como casos de producto (problema → solución → funcionalidades → stack → roadmap), tomados de los README reales de cada repositorio. Evidencia, no adjetivos |
 | ✍️ **Ensayos de producto** | Cuatro ensayos sobre experimentación, PMF e IA con páginas propias — retención para el lector que quiere profundidad |
 | 🎨 **Diseño editorial** | Tipografía serif/mono, animaciones de entrada y cursor fluido: la primera impresión también comunica estándar de calidad |
 | 🚀 **Publicación automática** | Cada push a `main` despliega en GitHub Pages sin build step — tiempo de fricción detectada a mejora publicada: minutos |
@@ -228,7 +228,7 @@ Sitio 100% estático, sin build step, sin bundler y sin dependencias de npm.
 
 ### ✅ Completado
 - [x] Portada de marca personal: hero, sobre mí con foto, método en 4 pasos y trayectoria con logros
-- [x] Seis proyectos con ficha de caso de producto en modal, basada en los README reales de cada repo
+- [x] Ocho proyectos con ficha de caso de producto en modal, basada en los README reales de cada repo
 - [x] Chat asistente con chips guiados y enrutamiento de preguntas libres
 - [x] Cuatro ensayos con páginas propias y URLs limpias
 - [x] Despliegue automático en GitHub Pages
