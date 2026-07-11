@@ -31,7 +31,7 @@
 
 ## 🎯 ¿Qué es este portafolio?
 
-Es el sitio de marca personal de **Felipe Peña**, Growth Product Manager en Bogotá, Colombia. Y está construido como pienso los productos: el visitante es un usuario con un job-to-be-done — evaluar en pocos minutos si vale la pena hablar conmigo — y cada sección existe para mover esa decisión, no para decorar.
+Es el sitio de marca personal de **Felipe Peña**, Growth Product Manager. Y está construido como pienso los productos: el visitante es un usuario con un job-to-be-done — evaluar en pocos minutos si vale la pena hablar conmigo — y cada sección existe para mover esa decisión, no para decorar.
 
 ### El problema que resuelve
 
