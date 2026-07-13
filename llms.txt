@@ -1,0 +1,33 @@
+# Felipe Peña — Growth Product Manager
+
+> Portafolio personal de Bairon Felipe Peña Castellanos (Felipe Peña), Growth
+> Product Manager especializado en SaaS B2B/B2G. Convierte fricción de usuario
+> en retención e ingresos con datos y experimentos. Sitio en español.
+
+Lema: "El crecimiento no se hackea. Se compone."
+
+Trayectoria en tres actos: entrega de proyectos de software B2G/B2B a tiempo →
+construcción de Customer Success desde cero → Growth Product Management
+(analítica, experimentación, discovery y pre-venta). Responsable de la
+evolución del portafolio IFindIT (Search, Chat, Data Catalog, Dashboards).
+
+Método de trabajo: Escuchar (mapa de fricciones) → Medir (baseline y cuello de
+botella) → Experimentar → Componer (mejoras que se acumulan).
+
+## Secciones principales
+
+- [Portada](https://felipepena.co/): hero, sobre mí, método, trayectoria, proyectos y contacto
+- [Proyectos](https://felipepena.co/#proyectos): 8 proyectos personales con ficha de caso de producto (AgileFlow, FlowBoard, BodyCalc, Pomodoro Llanero, Scripts para Excel, Alto Nivel, StabilityMonitor, este portfolio)
+- [Contacto](https://felipepena.co/#contacto): mail ing.felipe55@outlook.com, LinkedIn y GitHub
+
+## Ensayos (en español)
+
+- [Cómo elegir el experimento correcto según la etapa de tu producto](https://felipepena.co/ensayos/como-elegir-el-experimento-correcto.html): experimentación según madurez del producto, 5 min
+- [Product-Market Fit no es un destino: cómo sostenerlo y expandirlo](https://felipepena.co/ensayos/pmf-sostener-y-expandir.html): estrategia de producto, 7 min
+- [Agencia sobre agentes: tu estrategia de IA tiene un problema de confianza](https://felipepena.co/ensayos/agencia-sobre-agentes.html): cultura organizacional e IA — la velocidad depende de dar autonomía y contexto a los equipos, no de comprar más agentes, 9 min
+- [La era de la IA exige otra forma de experimentar](https://felipepena.co/ensayos/experimentacion-en-la-era-de-la-ia.html): experimentación e IA, 10 min
+
+## Perfiles
+
+- [GitHub](https://github.com/castellanosfelipe): código de todos los proyectos
+- [LinkedIn](https://www.linkedin.com/in/bairon-felipe-peña-castellanos-ab18411b5/): perfil profesional
