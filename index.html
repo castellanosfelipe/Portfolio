@@ -83,11 +83,46 @@
     .ficha-body li{font-size:14px;line-height:1.65;color:#4a4654;margin:0 0 5px;}
     .ficha-body .tags{display:flex;flex-wrap:wrap;gap:6px;}
     .ficha-body .tags span{border:1px solid #e6e3de;border-radius:999px;padding:3px 10px;font-size:12px;color:#4a4654;}
+    /* ===== Selector de idioma (desktop y móvil) ===== */
+    .lang-toggle{display:flex;align-items:center;gap:2px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em;border:1px solid #ddd8e2;border-radius:999px;padding:3px;background:rgba(255,255,255,0.55);}
+    .lang-toggle a{text-decoration:none;padding:4px 9px;border-radius:999px;color:#9b95a6;transition:color .15s;}
+    .lang-toggle a:hover{color:#5b4bd6;}
+    .lang-toggle a[aria-current="true"]{background:#17141c;color:#fff;}
+    /* ===== Nav móvil ===== */
+    .nav-burger{align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #ddd8e2;border-radius:999px;background:rgba(255,255,255,0.55);cursor:pointer;color:#17141c;padding:0;}
+    .nav-sheet{flex-direction:column;padding:8px 24px 22px;background:#f6f5f3;border-top:1px solid #e5e2dc;}
+    .nav-sheet a{font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:300;color:#17141c;text-decoration:none;padding:13px 4px;border-bottom:1px solid #e9e6e0;display:flex;justify-content:space-between;align-items:center;}
+    .nav-sheet a .num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;letter-spacing:0.14em;}
+    .nav-sheet a.sheet-cta{margin-top:18px;border:none;background:#17141c;color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;padding:14px 24px;border-radius:999px;justify-content:center;}
+    /* ===== Responsive (estrategia C: vars con fallback = desktop actual) ===== */
+    @media (max-width:767px){
+      :root{
+        --cols-metodo:1fr;
+        --cols-3:1fr;
+        --gap-grid:28px;
+        --hero-dir:column;
+        --hero-gap:44px;
+        --hero-pad:56px 32px 96px;
+        --hero-img:210px;
+        --fs-h1:clamp(38px,11vw,48px);
+        --minw-col:0;
+        --big-name:34vw;
+        --modal-pad:16px;
+        --nav-links-d:none;
+        --nav-mobile-d:flex;
+        --nav-sheet-d:flex;
+      }
+    }
+    @media (min-width:768px) and (max-width:1023px){
+      :root{ --cols-metodo:1fr 1fr; --cols-3:1fr 1fr; }
+    }
   </style>
 </helmet>
 <div style="position:relative;min-height:100vh;background:#f6f5f3;font-family:'Hanken Grotesk',-apple-system,sans-serif;color:#17141c;">
 
-  <x-import component-from-global-scope="fluid-cursor" from="./fluid-cursor.js" hint-size="1px,1px"></x-import>
+  <sc-if value="{{ pointerFine }}" hint-placeholder-val="{{ false }}">
+    <x-import component-from-global-scope="fluid-cursor" from="./fluid-cursor.js" hint-size="1px,1px"></x-import>
+  </sc-if>
 
   <!-- NAV -->
   <nav data-screen-label="Nav" style="position:sticky;top:0;z-index:50;background:rgba(246,245,243,0.88);backdrop-filter:blur(12px);border-bottom:1px solid #e5e2dc;">
@@ -96,22 +131,41 @@
         <span style="width:34px;height:34px;border:1.5px solid #5b4bd6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:14px;">FP</span>
         <span style="font-family:'Newsreader',Georgia,serif;font-size:21px;">Felipe Peña</span>
       </a>
-      <div style="display:flex;gap:26px;align-items:center;font-size:14px;font-weight:500;">
+      <div style="display:var(--nav-links-d,flex);gap:26px;align-items:center;font-size:14px;font-weight:500;">
         <a href="#sobre-mi" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Sobre mí</a>
         <a href="#metodo" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Método</a>
         <a href="#proyectos" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Proyectos</a>
         <a href="#ensayos" style="color:#4a4654;text-decoration:none;" style-hover="color:#5b4bd6;">Ensayos</a>
         <a href="mailto:ing.felipe55@outlook.com" style="color:#fff;background:#17141c;border-radius:999px;padding:9px 18px;text-decoration:none;" style-hover="background:#5b4bd6;">Hablemos</a>
       </div>
+      <div style="display:var(--nav-mobile-d,none);align-items:center;gap:10px;">
+        <button class="nav-burger" style="display:var(--nav-mobile-d,none);" onClick="{{ toggleMenu }}" aria-label="Menú" aria-expanded="{{ menuOpen }}">
+          <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </sc-if>
+          <sc-if value="{{ menuClosed }}" hint-placeholder-val="{{ true }}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          </sc-if>
+        </button>
+      </div>
     </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div class="nav-sheet" style="display:var(--nav-sheet-d,none);">
+        <a href="#sobre-mi" onClick="{{ closeMenu }}">Sobre mí <span class="num">01</span></a>
+        <a href="#metodo" onClick="{{ closeMenu }}">Método <span class="num">02</span></a>
+        <a href="#proyectos" onClick="{{ closeMenu }}">Proyectos <span class="num">03</span></a>
+        <a href="#ensayos" onClick="{{ closeMenu }}">Ensayos <span class="num">04</span></a>
+        <a class="sheet-cta" href="mailto:ing.felipe55@outlook.com" onClick="{{ closeMenu }}">Hablemos →</a>
+      </div>
+    </sc-if>
   </nav>
 
   <!-- HERO -->
   <header id="inicio" data-screen-label="Hero" style="position:relative;z-index:2;overflow:hidden;">
-    <div style="max-width:1140px;margin:0 auto;padding:88px 32px 120px;display:flex;gap:64px;align-items:center;justify-content:space-between;">
+    <div style="max-width:1140px;margin:0 auto;padding:var(--hero-pad,88px 32px 120px);display:flex;flex-direction:var(--hero-dir,row);gap:var(--hero-gap,64px);align-items:center;justify-content:space-between;">
       <div style="max-width:640px;animation:slideDown 0.8s ease both;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b4bd6;margin-bottom:24px;">Growth Product Manager · SaaS B2B / B2G</div>
-        <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:66px;line-height:1.04;letter-spacing:-0.02em;margin:0;">El crecimiento no se hackea. <span style="font-style:italic;color:#5b4bd6;">Se compone.</span></h1>
+        <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:var(--fs-h1,66px);line-height:1.04;letter-spacing:-0.02em;margin:0;">El crecimiento no se hackea. <span style="font-style:italic;color:#5b4bd6;">Se compone.</span></h1>
         <p style="font-size:17.5px;line-height:1.62;color:#4a4654;margin:24px 0 0;max-width:530px;">Soy <strong style="font-weight:600;color:#17141c;">Felipe Peña</strong>. Ayudo a productos SaaS a convertir fricción de usuario en retención e ingresos, con datos y experimentos, no con humo.</p>
         <div style="display:flex;gap:16px;margin-top:34px;align-items:center;flex-wrap:wrap;">
           <a href="#sobre-mi" style="background:#5b4bd6;color:#fff;font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;text-decoration:none;" style-hover="background:#17141c;">Conóceme →</a>
@@ -129,13 +183,13 @@
       </div>
       <div style="flex:none;position:relative;animation:slideUp 0.8s ease 0.2s both;">
         <div style="position:absolute;left:-14px;top:-14px;right:14px;bottom:14px;border:1px solid #d8d3e6;border-radius:50%;"></div>
-        <div style="width:290px;height:290px;border-radius:50%;overflow:hidden;position:relative;">
-          <img src="./avatar-felipe-memoji.png" alt="Felipe Peña" style="width:290px;height:290px;display:block;object-fit:cover;">
+        <div style="width:var(--hero-img,290px);height:var(--hero-img,290px);border-radius:50%;overflow:hidden;position:relative;">
+          <img src="./avatar-felipe-memoji.png" alt="Felipe Peña" style="width:var(--hero-img,290px);height:var(--hero-img,290px);display:block;object-fit:cover;">
         </div>
       </div>
     </div>
     <div style="position:absolute;left:0;right:0;bottom:-30px;display:flex;justify-content:center;overflow:hidden;pointer-events:none;">
-      <div style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:15rem;line-height:1;user-select:none;background:linear-gradient(to bottom, rgba(91,75,214,0.10), rgba(91,75,214,0));-webkit-background-clip:text;background-clip:text;color:transparent;">Felipe</div>
+      <div style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:var(--big-name,15rem);line-height:1;user-select:none;background:linear-gradient(to bottom, rgba(91,75,214,0.10), rgba(91,75,214,0));-webkit-background-clip:text;background-clip:text;color:transparent;">Felipe</div>
     </div>
   </header>
 
@@ -146,7 +200,7 @@
         <div style="position:absolute;left:-14px;top:14px;right:14px;bottom:-14px;border:1px solid rgba(139,124,246,0.35);border-radius:22px;"></div>
         <img src="./foto-felipe.jpg" alt="Felipe Peña" style="width:min(360px, 80vw);aspect-ratio:3/4;object-fit:cover;border-radius:22px;display:block;position:relative;">
       </div>
-      <div style="flex:1;min-width:300px;">
+      <div style="flex:1;min-width:var(--minw-col,300px);">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#8079a0;margin-bottom:20px;">Sobre mí</div>
         <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:42px;line-height:1.15;letter-spacing:-0.01em;color:#fff;margin:0;">Product Manager de crecimiento, <span style="font-style:italic;color:#b9b1e4;">constructor por naturaleza.</span></h2>
         <p style="font-size:15.5px;line-height:1.7;color:#cfcbe0;margin:24px 0 0;">Soy Felipe Peña, Growth Product Manager. Empecé entregando proyectos de software B2G y B2B a tiempo; después construí Customer Success desde cero; hoy me dedico a lo que más me obsesiona: entender por qué un producto crece y hacer que crezca con datos y experimentos, no con humo.</p>
@@ -165,7 +219,7 @@
     <div style="max-width:1140px;margin:0 auto;padding:76px 32px;">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:14px;">El método</div>
       <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:34px;line-height:1.2;margin:0 0 40px;max-width:680px;">Un ciclo simple, <span style="font-style:italic;color:#5b4bd6;">repetido con disciplina.</span></h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:36px;">
+      <div style="display:grid;grid-template-columns:var(--cols-metodo,1fr 1fr 1fr 1fr);gap:var(--gap-grid,36px);">
         <div style="border-top:2px solid #5b4bd6;padding-top:18px;display:flex;flex-direction:column;">
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9b95a6;margin-bottom:10px;">01</div>
           <div style="font-family:'Newsreader',serif;font-size:24px;">Escuchar</div>
@@ -199,7 +253,7 @@
     <div style="max-width:1140px;margin:0 auto;padding:80px 32px;">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#9b95a6;margin-bottom:14px;">Trayectoria</div>
       <p style="font-family:'Newsreader',serif;font-weight:300;font-size:30px;line-height:1.35;color:#2b2733;margin:0 0 40px;max-width:720px;">Empecé entregando software a tiempo. Terminé obsesionado con lo que ocurre <span style="font-style:italic;color:#5b4bd6;">después</span> del lanzamiento.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;">
+      <div style="display:grid;grid-template-columns:var(--cols-3,1fr 1fr 1fr);gap:var(--gap-grid,36px);">
         <div style="border-top:2px solid #d8d3e6;padding-top:18px;">
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5b4bd6;margin-bottom:10px;">ACTO I · ENTREGA</div>
           <p style="font-size:14.5px;line-height:1.62;color:#4a4654;margin:0;">Gestión de proyectos de software B2G y B2B. La base: equipos, alcance y compromisos cumplidos.</p>
@@ -230,7 +284,7 @@
         </div>
         <a href="https://github.com/castellanosfelipe" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#5b4bd6;text-decoration:none;" style-hover="color:#17141c;">github.com/castellanosfelipe ↗</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:42px;">
+      <div style="display:grid;grid-template-columns:var(--cols-3,1fr 1fr 1fr);gap:16px;margin-top:42px;">
         <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;" style-hover="border-color:#b9b1e4;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-family:'Newsreader',serif;font-size:22px;">AgileFlow</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9b95a6;border:1px solid #e6e3de;border-radius:999px;padding:3px 9px;">TypeScript</span></div>
           <p style="margin:0;font-size:13.5px;line-height:1.58;color:#6c6776;flex:1;">Gestión ágil completa: sprints, Kanban, Gantt, PERT y tablero ejecutivo, con migración desde Jira.</p>
@@ -378,7 +432,7 @@
 
   <!-- ═══════ FICHAS DE PROYECTO (MODAL) ═══════ -->
   <sc-if value="{{ fichaOpen }}" hint-placeholder-val="{{ false }}">
-    <div data-screen-label="Ficha de proyecto" onClick="{{ closeFicha }}" style="position:fixed;inset:0;z-index:120;background:rgba(23,20,28,0.6);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:28px;">
+    <div data-screen-label="Ficha de proyecto" onClick="{{ closeFicha }}" style="position:fixed;inset:0;z-index:120;background:rgba(23,20,28,0.6);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:var(--modal-pad,28px);">
       <sc-if value="{{ fichaAgile }}" hint-placeholder-val="{{ false }}">
         <div onClick="{{ stopProp }}" style="width:min(680px,100%);max-height:100%;background:#fdfdfc;border:1px solid #e5e2dc;border-radius:20px;box-shadow:0 40px 90px -24px rgba(23,20,28,0.5);display:flex;flex-direction:column;overflow:hidden;animation:panelIn 0.32s cubic-bezier(0.2,0.9,0.3,1) both;">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #eceae5;background:#f6f5f3;flex:none;">
@@ -855,11 +909,12 @@
     </div>
   </sc-if>
 
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Felipe Peña&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;ing.felipe55@outlook.com&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;chatEnabled&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Funcional&quot;}}">
 class Component extends DCLogic {
-  state = { chatOpen: false, messages: [], input: "", ficha: null };
+  state = { chatOpen: false, messages: [], input: "", ficha: null, menuOpen: false };
 
   ANSWERS = {
     me: "Empecé gestionando entregas de software. Hoy me obsesiona algo más difícil de mover: por qué un producto crece.\n\nActualmente soy responsable de la evolución del portafolio de producto IFindIT (Search, Chat, Data Catalog y Dashboards). Mi historia en tres actos:",
@@ -921,13 +976,19 @@ class Component extends DCLogic {
     clearTimeout(this._t);
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.messages.length !== this.state.messages.length || (!prevState.chatOpen && this.state.chatOpen)) {
+  componentDidUpdate() {
+    // El runtime invoca componentDidUpdate solo con prevProps (sin prevState),
+    // así que el estado anterior se rastrea en la propia instancia.
+    const msgCount = this.state.messages.length;
+    const chatJustOpened = this.state.chatOpen && !this._wasChatOpen;
+    if (msgCount !== (this._lastMsgCount || 0) || chatJustOpened) {
       requestAnimationFrame(() => {
         const el = document.getElementById("chat-scroll");
         if (el) el.scrollTop = el.scrollHeight;
       });
     }
+    this._lastMsgCount = msgCount;
+    this._wasChatOpen = this.state.chatOpen;
   }
 
   renderVals() {
@@ -963,6 +1024,11 @@ class Component extends DCLogic {
         if (!q) return;
         this.ask(this.route(q), q);
       },
+      menuOpen: this.state.menuOpen,
+      menuClosed: !this.state.menuOpen,
+      toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      pointerFine: typeof window.matchMedia === "function" && window.matchMedia("(pointer: fine)").matches,
       fichaOpen: this.state.ficha !== null,
       fichaAgile: this.state.ficha === "agile",
       fichaFlow: this.state.ficha === "flow",

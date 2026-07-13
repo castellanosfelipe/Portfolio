@@ -51,6 +51,7 @@
     html{scroll-behavior:smooth;}
     html,body{margin:0;padding:0;background:#f6f5f3;}
     ::selection{background:#5b4bd6;color:#fff;}
+    @media (max-width:480px){:root{--cols-2:1fr;}}
   </style>
 </helmet>
 <div data-screen-label="Ensayo · Agencia sobre agentes" style="min-height:100vh;background:#f6f5f3;font-family:'Newsreader',Georgia,serif;color:#17141c;">
@@ -93,7 +94,7 @@
 
     <div style="background:#fff;border:1px solid #e6e3de;border-radius:12px;padding:30px 32px;margin:8px 0 40px;box-shadow:0 1px 2px rgba(20,16,30,0.04);">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#9b95a6;margin-bottom:22px;">Figura · Dos modelos de organización</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;">
+      <div style="display:grid;grid-template-columns:var(--cols-2,1fr 1fr);gap:28px;align-items:end;">
         <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
           <div style="width:74px;height:32px;background:#17141c;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;text-align:center;">LIDERAZGO</div>
           <div style="width:144px;height:32px;background:#4a4356;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.06em;text-align:center;">MANDOS MEDIOS</div>
