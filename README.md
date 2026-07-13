@@ -55,7 +55,7 @@ Un funnel de una sola página con una sola conversión: **que el visitante corre
 
 El sitio está publicado y funcionando en GitHub Pages:
 
-[![Ver el sitio en vivo](https://img.shields.io/badge/▶_Ver_el_sitio-castellanosfelipe.github.io/Portfolio-5b4bd6?style=for-the-badge)](https://castellanosfelipe.github.io/Portfolio/)
+[![Ver el sitio en vivo](https://img.shields.io/badge/▶_Ver_el_sitio-castellanosfelipe.github.io/Portfolio-5b4bd6?style=for-the-badge)](https://felipepena.co/)
 
 <div align="center">
   <img src="docs/media/demo-ficha-proyecto.gif" alt="Recorrido desde la portada hasta abrir la ficha completa de un proyecto en modal" width="800"/>
