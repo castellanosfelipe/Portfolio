@@ -34,7 +34,7 @@ struct = [
     # rutas relativas: /en/ está un nivel más abajo
     ('src="./support.js"', 'src="../support.js"', 1),
     ('from="./fluid-cursor.js"', 'from="../fluid-cursor.js"', 1),
-    ('src="./avatar-felipe-memoji.png"', 'src="../avatar-felipe-memoji.png"', None),
+    ('src="./avatar-felipe-memoji.webp"', 'src="../avatar-felipe-memoji.webp"', None),
     ('src="./foto-felipe.jpg"', 'src="../foto-felipe.jpg"', 1),
     ('href="ensayos/', 'href="../ensayos/', None),
     # toggle: el activo pasa a EN; ES navega con goSpanish
