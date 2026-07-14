@@ -1,0 +1,1007 @@
+{
+  "index-320": {
+    "vw": 320,
+    "scrollW": 738,
+    "overflowPx": 418,
+    "offenders": [
+      {
+        "tag": "a",
+        "w": 62,
+        "left": 292,
+        "right": 354,
+        "section": "Nav",
+        "text": "Proyectos"
+      },
+      {
+        "tag": "a",
+        "w": 52,
+        "left": 380,
+        "right": 432,
+        "section": "Nav",
+        "text": "Ensayos"
+      },
+      {
+        "tag": "a",
+        "w": 99,
+        "left": 458,
+        "right": 557,
+        "section": "Nav",
+        "text": "Hablemos"
+      },
+      {
+        "tag": "div",
+        "w": 316,
+        "left": 32,
+        "right": 348,
+        "section": "Hero",
+        "text": "Growth Product Manager · SaaS B2B / B2G"
+      },
+      {
+        "tag": "h1",
+        "w": 316,
+        "left": 32,
+        "right": 348,
+        "section": "Hero",
+        "text": "El crecimiento no se hackea. Se compone."
+      },
+      {
+        "tag": "p",
+        "w": 316,
+        "left": 32,
+        "right": 348,
+        "section": "Hero",
+        "text": "Soy Felipe Peña. Ayudo a productos SaaS a converti"
+      },
+      {
+        "tag": "div",
+        "w": 316,
+        "left": 32,
+        "right": 348,
+        "section": "Hero",
+        "text": "Conóceme → Pregúntame lo que quieras"
+      },
+      {
+        "tag": "div",
+        "w": 316,
+        "left": 32,
+        "right": 348,
+        "section": "Hero",
+        "text": "● Yo ● Proyectos ● Skills ● Contacto"
+      },
+      {
+        "tag": "div",
+        "w": 290,
+        "left": 398,
+        "right": 688,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "img",
+        "w": 290,
+        "left": 412,
+        "right": 702,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 590,
+        "left": -135,
+        "right": 455,
+        "section": "Hero",
+        "text": "Felipe"
+      },
+      {
+        "tag": "div",
+        "w": 300,
+        "left": 32,
+        "right": 332,
+        "section": "Sobre mí",
+        "text": "Sobre mí"
+      },
+      {
+        "tag": "h2",
+        "w": 300,
+        "left": 32,
+        "right": 332,
+        "section": "Sobre mí",
+        "text": "Product Manager de crecimiento, constructor por na"
+      },
+      {
+        "tag": "p",
+        "w": 300,
+        "left": 32,
+        "right": 332,
+        "section": "Sobre mí",
+        "text": "Soy Felipe Peña, Growth Product Manager. Empecé en"
+      },
+      {
+        "tag": "p",
+        "w": 300,
+        "left": 32,
+        "right": 332,
+        "section": "Sobre mí",
+        "text": "Cuando no estoy midiendo embudos, construyo produc"
+      },
+      {
+        "tag": "div",
+        "w": 300,
+        "left": 32,
+        "right": 332,
+        "section": "Sobre mí",
+        "text": "01Los datos antes que las opiniones."
+      },
+      {
+        "tag": "span",
+        "w": 272,
+        "left": 57,
+        "right": 329,
+        "section": "Sobre mí",
+        "text": "Pequeños experimentos que se acumulan."
+      },
+      {
+        "tag": "span",
+        "w": 270,
+        "left": 57,
+        "right": 327,
+        "section": "Sobre mí",
+        "text": "El crecimiento no se hackea: se compone."
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "03"
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "Experimentar"
+      }
+    ],
+    "nOffenders": 60,
+    "grids": [
+      {
+        "section": "Método",
+        "computedCols": "89px 80.7969px 136.922px 106.703px",
+        "colWidth": 89,
+        "nChildren": 4
+      },
+      {
+        "section": "Trayectoria",
+        "computedCols": "88.0469px 82.3438px 108.438px",
+        "colWidth": 88,
+        "nChildren": 3
+      },
+      {
+        "section": "Proyectos",
+        "computedCols": "261.547px 232.672px 179.406px",
+        "colWidth": 262,
+        "nChildren": 8
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "ensayo-320": {
+    "vw": 320,
+    "scrollW": 369,
+    "overflowPx": 49,
+    "offenders": [
+      {
+        "tag": "span",
+        "w": 34,
+        "left": 322,
+        "right": 356,
+        "section": "Ensayo · Agencia sobre agentes",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 34,
+        "left": 322,
+        "right": 356,
+        "section": "Ensayo · Agencia sobre agentes",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 34,
+        "left": 322,
+        "right": 356,
+        "section": "Ensayo · Agencia sobre agentes",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 34,
+        "left": 322,
+        "right": 356,
+        "section": "Ensayo · Agencia sobre agentes",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 34,
+        "left": 322,
+        "right": 356,
+        "section": "Ensayo · Agencia sobre agentes",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 34,
+        "left": 322,
+        "right": 356,
+        "section": "Ensayo · Agencia sobre agentes",
+        "text": ""
+      },
+      {
+        "tag": "div",
+        "w": 60,
+        "left": 309,
+        "right": 369,
+        "section": "Ensayo · Agencia sobre agentes",
+        "text": ""
+      }
+    ],
+    "nOffenders": 7,
+    "grids": [
+      {
+        "section": "Ensayo · Agencia sobre agentes",
+        "computedCols": "220px 59.9531px",
+        "colWidth": 220,
+        "nChildren": 2
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "index-390": {
+    "vw": 390,
+    "scrollW": 738,
+    "overflowPx": 348,
+    "offenders": [
+      {
+        "tag": "a",
+        "w": 52,
+        "left": 380,
+        "right": 432,
+        "section": "Nav",
+        "text": "Ensayos"
+      },
+      {
+        "tag": "a",
+        "w": 99,
+        "left": 458,
+        "right": 557,
+        "section": "Nav",
+        "text": "Hablemos"
+      },
+      {
+        "tag": "div",
+        "w": 290,
+        "left": 398,
+        "right": 688,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "img",
+        "w": 290,
+        "left": 412,
+        "right": 702,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 590,
+        "left": -100,
+        "right": 490,
+        "section": "Hero",
+        "text": "Felipe"
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "03"
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "Experimentar"
+      },
+      {
+        "tag": "p",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "Cada apuesta se convierte en una hipótesis falsabl"
+      },
+      {
+        "tag": "p",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "→ Una decisión honesta: escalar, iterar o descarta"
+      },
+      {
+        "tag": "div",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "04 ↻"
+      },
+      {
+        "tag": "div",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "Componer"
+      },
+      {
+        "tag": "p",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "Lo que gana se integra al producto y al playbook d"
+      },
+      {
+        "tag": "p",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "→ Un sistema que mejora trimestre a trimestre."
+      },
+      {
+        "tag": "span",
+        "w": 99,
+        "left": 337,
+        "right": 435,
+        "section": "Proyectos",
+        "text": "FlowBoard"
+      },
+      {
+        "tag": "span",
+        "w": 80,
+        "left": 435,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "JavaScript"
+      },
+      {
+        "tag": "p",
+        "w": 179,
+        "left": 337,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "Analítica visual para Jira: Gantt, PERT, seguimien"
+      },
+      {
+        "tag": "a",
+        "w": 58,
+        "left": 394,
+        "right": 451,
+        "section": "Proyectos",
+        "text": "Código ↗"
+      },
+      {
+        "tag": "button",
+        "w": 179,
+        "left": 337,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "Ficha completa del proyecto"
+      },
+      {
+        "tag": "span",
+        "w": 87,
+        "left": 585,
+        "right": 673,
+        "section": "Proyectos",
+        "text": "BodyCalc"
+      },
+      {
+        "tag": "span",
+        "w": 38,
+        "left": 673,
+        "right": 711,
+        "section": "Proyectos",
+        "text": "Vue · TS"
+      }
+    ],
+    "nOffenders": 42,
+    "grids": [
+      {
+        "section": "Método",
+        "computedCols": "89px 80.7969px 136.922px 106.703px",
+        "colWidth": 89,
+        "nChildren": 4
+      },
+      {
+        "section": "Trayectoria",
+        "computedCols": "88.0469px 82.3438px 108.438px",
+        "colWidth": 88,
+        "nChildren": 3
+      },
+      {
+        "section": "Proyectos",
+        "computedCols": "261.547px 232.672px 179.406px",
+        "colWidth": 262,
+        "nChildren": 8
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "ficha-modal-390": {
+    "vw": 390,
+    "scrollW": 738,
+    "overflowPx": 348,
+    "offenders": [
+      {
+        "tag": "a",
+        "w": 52,
+        "left": 380,
+        "right": 432,
+        "section": "Nav",
+        "text": "Ensayos"
+      },
+      {
+        "tag": "a",
+        "w": 99,
+        "left": 458,
+        "right": 557,
+        "section": "Nav",
+        "text": "Hablemos"
+      },
+      {
+        "tag": "div",
+        "w": 290,
+        "left": 398,
+        "right": 688,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "img",
+        "w": 290,
+        "left": 412,
+        "right": 702,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 590,
+        "left": -100,
+        "right": 490,
+        "section": "Hero",
+        "text": "Felipe"
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "03"
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "Experimentar"
+      },
+      {
+        "tag": "p",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "Cada apuesta se convierte en una hipótesis falsabl"
+      },
+      {
+        "tag": "p",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "→ Una decisión honesta: escalar, iterar o descarta"
+      },
+      {
+        "tag": "div",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "04 ↻"
+      },
+      {
+        "tag": "div",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "Componer"
+      },
+      {
+        "tag": "p",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "Lo que gana se integra al producto y al playbook d"
+      },
+      {
+        "tag": "p",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "→ Un sistema que mejora trimestre a trimestre."
+      },
+      {
+        "tag": "span",
+        "w": 99,
+        "left": 337,
+        "right": 435,
+        "section": "Proyectos",
+        "text": "FlowBoard"
+      },
+      {
+        "tag": "span",
+        "w": 80,
+        "left": 435,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "JavaScript"
+      },
+      {
+        "tag": "p",
+        "w": 179,
+        "left": 337,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "Analítica visual para Jira: Gantt, PERT, seguimien"
+      },
+      {
+        "tag": "a",
+        "w": 58,
+        "left": 394,
+        "right": 451,
+        "section": "Proyectos",
+        "text": "Código ↗"
+      },
+      {
+        "tag": "button",
+        "w": 179,
+        "left": 337,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "Ficha completa del proyecto"
+      },
+      {
+        "tag": "span",
+        "w": 87,
+        "left": 585,
+        "right": 673,
+        "section": "Proyectos",
+        "text": "BodyCalc"
+      },
+      {
+        "tag": "span",
+        "w": 38,
+        "left": 673,
+        "right": 711,
+        "section": "Proyectos",
+        "text": "Vue · TS"
+      }
+    ],
+    "nOffenders": 66,
+    "grids": [
+      {
+        "section": "Método",
+        "computedCols": "89px 80.7969px 136.922px 106.703px",
+        "colWidth": 89,
+        "nChildren": 4
+      },
+      {
+        "section": "Trayectoria",
+        "computedCols": "88.0469px 82.3438px 108.438px",
+        "colWidth": 88,
+        "nChildren": 3
+      },
+      {
+        "section": "Proyectos",
+        "computedCols": "261.547px 232.672px 179.406px",
+        "colWidth": 262,
+        "nChildren": 8
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "chat-390": {
+    "vw": 390,
+    "scrollW": 738,
+    "overflowPx": 348,
+    "offenders": [
+      {
+        "tag": "a",
+        "w": 52,
+        "left": 380,
+        "right": 432,
+        "section": "Nav",
+        "text": "Ensayos"
+      },
+      {
+        "tag": "a",
+        "w": 99,
+        "left": 458,
+        "right": 557,
+        "section": "Nav",
+        "text": "Hablemos"
+      },
+      {
+        "tag": "div",
+        "w": 290,
+        "left": 398,
+        "right": 688,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "img",
+        "w": 290,
+        "left": 412,
+        "right": 702,
+        "section": "Hero",
+        "text": ""
+      },
+      {
+        "tag": "span",
+        "w": 590,
+        "left": -100,
+        "right": 490,
+        "section": "Hero",
+        "text": "Felipe"
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "03"
+      },
+      {
+        "tag": "div",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "Experimentar"
+      },
+      {
+        "tag": "p",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "Cada apuesta se convierte en una hipótesis falsabl"
+      },
+      {
+        "tag": "p",
+        "w": 137,
+        "left": 274,
+        "right": 411,
+        "section": "Método",
+        "text": "→ Una decisión honesta: escalar, iterar o descarta"
+      },
+      {
+        "tag": "div",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "04 ↻"
+      },
+      {
+        "tag": "div",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "Componer"
+      },
+      {
+        "tag": "p",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "Lo que gana se integra al producto y al playbook d"
+      },
+      {
+        "tag": "p",
+        "w": 107,
+        "left": 447,
+        "right": 553,
+        "section": "Método",
+        "text": "→ Un sistema que mejora trimestre a trimestre."
+      },
+      {
+        "tag": "span",
+        "w": 99,
+        "left": 337,
+        "right": 435,
+        "section": "Proyectos",
+        "text": "FlowBoard"
+      },
+      {
+        "tag": "span",
+        "w": 80,
+        "left": 435,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "JavaScript"
+      },
+      {
+        "tag": "p",
+        "w": 179,
+        "left": 337,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "Analítica visual para Jira: Gantt, PERT, seguimien"
+      },
+      {
+        "tag": "a",
+        "w": 58,
+        "left": 394,
+        "right": 451,
+        "section": "Proyectos",
+        "text": "Código ↗"
+      },
+      {
+        "tag": "button",
+        "w": 179,
+        "left": 337,
+        "right": 515,
+        "section": "Proyectos",
+        "text": "Ficha completa del proyecto"
+      },
+      {
+        "tag": "span",
+        "w": 87,
+        "left": 585,
+        "right": 673,
+        "section": "Proyectos",
+        "text": "BodyCalc"
+      },
+      {
+        "tag": "span",
+        "w": 38,
+        "left": 673,
+        "right": 711,
+        "section": "Proyectos",
+        "text": "Vue · TS"
+      }
+    ],
+    "nOffenders": 56,
+    "grids": [
+      {
+        "section": "Método",
+        "computedCols": "89px 80.7969px 136.922px 106.703px",
+        "colWidth": 89,
+        "nChildren": 4
+      },
+      {
+        "section": "Trayectoria",
+        "computedCols": "88.0469px 82.3438px 108.438px",
+        "colWidth": 88,
+        "nChildren": 3
+      },
+      {
+        "section": "Proyectos",
+        "computedCols": "261.547px 232.672px 179.406px",
+        "colWidth": 262,
+        "nChildren": 8
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "ensayo-390": {
+    "vw": 390,
+    "scrollW": 390,
+    "overflowPx": 0,
+    "offenders": [],
+    "nOffenders": 0,
+    "grids": [
+      {
+        "section": "Ensayo · Agencia sobre agentes",
+        "computedCols": "220px 59.9531px",
+        "colWidth": 220,
+        "nChildren": 2
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "index-768": {
+    "vw": 768,
+    "scrollW": 768,
+    "overflowPx": 0,
+    "offenders": [],
+    "nOffenders": 0,
+    "grids": [
+      {
+        "section": "Método",
+        "computedCols": "149px 149px 149px 149px",
+        "colWidth": 149,
+        "nChildren": 4
+      },
+      {
+        "section": "Trayectoria",
+        "computedCols": "210.656px 210.672px 210.672px",
+        "colWidth": 211,
+        "nChildren": 3
+      },
+      {
+        "section": "Proyectos",
+        "computedCols": "261.547px 232.672px 179.406px",
+        "colWidth": 262,
+        "nChildren": 8
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "ensayo-768": {
+    "vw": 768,
+    "scrollW": 768,
+    "overflowPx": 0,
+    "offenders": [],
+    "nOffenders": 0,
+    "grids": [
+      {
+        "section": "Ensayo · Agencia sobre agentes",
+        "computedCols": "275px 275px",
+        "colWidth": 275,
+        "nChildren": 2
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "index-1024": {
+    "vw": 1024,
+    "scrollW": 1024,
+    "overflowPx": 0,
+    "offenders": [],
+    "nOffenders": 0,
+    "grids": [
+      {
+        "section": "Método",
+        "computedCols": "213px 213px 213px 213px",
+        "colWidth": 213,
+        "nChildren": 4
+      },
+      {
+        "section": "Trayectoria",
+        "computedCols": "296px 296px 296px",
+        "colWidth": 296,
+        "nChildren": 3
+      },
+      {
+        "section": "Proyectos",
+        "computedCols": "309.328px 309.328px 309.344px",
+        "colWidth": 309,
+        "nChildren": 8
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "ensayo-1024": {
+    "vw": 1024,
+    "scrollW": 1024,
+    "overflowPx": 0,
+    "offenders": [],
+    "nOffenders": 0,
+    "grids": [
+      {
+        "section": "Ensayo · Agencia sobre agentes",
+        "computedCols": "275px 275px",
+        "colWidth": 275,
+        "nChildren": 2
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "index-1440": {
+    "vw": 1440,
+    "scrollW": 1440,
+    "overflowPx": 0,
+    "offenders": [],
+    "nOffenders": 0,
+    "grids": [
+      {
+        "section": "Método",
+        "computedCols": "242px 242px 242px 242px",
+        "colWidth": 242,
+        "nChildren": 4
+      },
+      {
+        "section": "Trayectoria",
+        "computedCols": "334.656px 334.672px 334.656px",
+        "colWidth": 335,
+        "nChildren": 3
+      },
+      {
+        "section": "Proyectos",
+        "computedCols": "348px 348px 348px",
+        "colWidth": 348,
+        "nChildren": 8
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "ensayo-1440": {
+    "vw": 1440,
+    "scrollW": 1440,
+    "overflowPx": 0,
+    "offenders": [],
+    "nOffenders": 0,
+    "grids": [
+      {
+        "section": "Ensayo · Agencia sobre agentes",
+        "computedCols": "275px 275px",
+        "colWidth": 275,
+        "nChildren": 2
+      }
+    ],
+    "smallText": [],
+    "nSmallText": 0
+  },
+  "network-390": {
+    "avatar-felipe-memoji.png": 864805,
+    "http://localhost:8899/": 205162,
+    "foto-felipe.jpg": 167529,
+    "cY9CfjOCX1hbuyalUrK439vCjohCBJWxZA.woff2": 147060,
+    "cY9AfjOCX1hbuyalUrK4397yjIJFJpc.woff2": 131848,
+    "react-dom.production.min.js": 131835,
+    "support.js": 60151,
+    "fluid-cursor.js": 36290,
+    "ieVn2YZDLWuGJpnzaiwFXS9tYtpd59CxCis4.woff2": 34664,
+    "css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,40": 16960,
+    "react.production.min.js": 10751,
+    "-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgsAXHNk.woff2": 10060,
+    "-F63fjptAgt5VM-kVkqdyU8n1i8q131nj-o.woff2": 10052
+  },
+  "network-total-bytes": 1827167
+}
