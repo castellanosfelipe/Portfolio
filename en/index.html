@@ -116,6 +116,7 @@
         --nav-links-d:none;
         --nav-mobile-d:flex;
         --nav-sheet-d:flex;
+        --anim-hero:none;
       }
     }
     @media (min-width:768px) and (max-width:1023px){
@@ -176,7 +177,7 @@
   <!-- HERO -->
   <header id="inicio" data-screen-label="Hero" style="position:relative;z-index:2;overflow:hidden;">
     <div style="max-width:1140px;margin:0 auto;padding:var(--hero-pad,88px 32px 120px);display:flex;flex-direction:var(--hero-dir,row);gap:var(--hero-gap,64px);align-items:center;justify-content:space-between;">
-      <div style="max-width:640px;animation:slideDown 0.8s ease both;">
+      <div style="max-width:640px;animation:var(--anim-hero,slideDown 0.8s ease both);">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5b4bd6;margin-bottom:24px;">Growth Product Manager · B2B / B2G SaaS</div>
         <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:var(--fs-h1,66px);line-height:1.04;letter-spacing:-0.02em;margin:0;">Growth isn't hacked. <span style="font-style:italic;color:#5b4bd6;">It compounds.</span></h1>
         <p style="font-size:17.5px;line-height:1.62;color:#4a4654;margin:24px 0 0;max-width:530px;">I'm <strong style="font-weight:600;color:#17141c;">Felipe Peña</strong>. I help SaaS products turn user friction into retention and revenue, with data and experiments, not smoke.</p>
@@ -187,14 +188,14 @@
             Ask me anything
           </button>
         </div>
-        <div style="display:flex;gap:9px;margin-top:22px;flex-wrap:wrap;animation:slideUp 0.8s ease 0.15s both;">
+        <div style="display:flex;gap:9px;margin-top:22px;flex-wrap:wrap;animation:var(--anim-hero,slideUp 0.8s ease 0.15s both);">
           <button onClick="{{ askMe }}" style="display:flex;align-items:center;gap:7px;border:1px solid #ddd8e2;background:rgba(255,255,255,0.5);backdrop-filter:blur(8px);border-radius:999px;padding:7px 14px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4a4654;" style-hover="border-color:#5b4bd6;color:#5b4bd6;"><span style="color:#5b4bd6;">●</span> Me</button>
           <button onClick="{{ askProjects }}" style="display:flex;align-items:center;gap:7px;border:1px solid #ddd8e2;background:rgba(255,255,255,0.5);backdrop-filter:blur(8px);border-radius:999px;padding:7px 14px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4a4654;" style-hover="border-color:#5b4bd6;color:#5b4bd6;"><span style="color:#8b7cf6;">●</span> Projects</button>
           <button onClick="{{ askSkills }}" style="display:flex;align-items:center;gap:7px;border:1px solid #ddd8e2;background:rgba(255,255,255,0.5);backdrop-filter:blur(8px);border-radius:999px;padding:7px 14px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4a4654;" style-hover="border-color:#5b4bd6;color:#5b4bd6;"><span style="color:#b9b1e4;">●</span> Skills</button>
           <button onClick="{{ askContact }}" style="display:flex;align-items:center;gap:7px;border:1px solid #ddd8e2;background:rgba(255,255,255,0.5);backdrop-filter:blur(8px);border-radius:999px;padding:7px 14px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4a4654;" style-hover="border-color:#5b4bd6;color:#5b4bd6;"><span style="color:#5b4bd6;">●</span> Contact</button>
         </div>
       </div>
-      <div style="flex:none;position:relative;animation:slideUp 0.8s ease 0.2s both;">
+      <div style="flex:none;position:relative;animation:var(--anim-hero,slideUp 0.8s ease 0.2s both);">
         <div style="position:absolute;left:-14px;top:-14px;right:14px;bottom:14px;border:1px solid #d8d3e6;border-radius:50%;"></div>
         <div style="width:var(--hero-img,290px);height:var(--hero-img,290px);border-radius:50%;overflow:hidden;position:relative;">
           <img src="../avatar-felipe-memoji.webp" alt="Felipe Peña" fetchpriority="high" style="width:var(--hero-img,290px);height:var(--hero-img,290px);display:block;object-fit:cover;">
