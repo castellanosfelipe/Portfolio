@@ -19,7 +19,7 @@ botella) → Experimentar → Componer (mejoras que se acumulan).
 
 - [Portada](https://felipepena.co/): hero, sobre mí, método, trayectoria, proyectos y contacto
 - [Proyectos](https://felipepena.co/#proyectos): 8 proyectos personales con ficha de caso de producto (AgileFlow, FlowBoard, BodyCalc, Pomodoro Llanero, Scripts para Excel, Alto Nivel, StabilityMonitor, este portfolio)
-- [Contacto](https://felipepena.co/#contacto): mail ing.felipe55@outlook.com, LinkedIn y GitHub
+- [Contacto](https://felipepena.co/#contacto): mail felipe@felipepena.co, LinkedIn y GitHub
 
 ## Ensayos (en español)
 
